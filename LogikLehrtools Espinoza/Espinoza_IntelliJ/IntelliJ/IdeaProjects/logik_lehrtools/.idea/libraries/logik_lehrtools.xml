@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="logik_lehrtools">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/out/artifacts/logik_lehrtools/logik_lehrtools.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
