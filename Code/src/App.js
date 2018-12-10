@@ -12,6 +12,10 @@ class App extends Component {
       <div className="App">
         <header className={test[0].toLowerCase()}>
           <img src={logo} className="App-logo" alt="logo" />
+          <p>
+            <div>{test2+" wurde getestet"}<br />Ergebnis der Rechnung:</div>
+            <div>{add()}</div>
+          </p>
         </header>
       </div>
     );
