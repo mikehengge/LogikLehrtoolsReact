@@ -1,0 +1,10 @@
+Criticism React:
+
+https://www.altexsoft.com/blog/engineering/the-good-and-the-bad-of-reactjs-and-react-native/
+https://www.reddit.com/r/reactjs/comments/71h3qh/criticism_on_react/
+
+
+Tips react:
+
+https://i.redd.it/bxqfeurgfh711.png
+https://www.megadix.it/blog/create-react-app-servlet/
