@@ -1,0 +1,5 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+ReactDOM.render(<p>Hello world!</p>, document.getElementById('root'));
+ReactDOM.render(<p>This is a test.</p>, document.getElementById('test'));

@@ -1,0 +1,3 @@
+Install CodeMix
+Install React :: CodeMix
+follow steps in READFIRST
