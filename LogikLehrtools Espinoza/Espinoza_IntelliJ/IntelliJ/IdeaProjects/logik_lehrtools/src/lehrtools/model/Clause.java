@@ -175,7 +175,7 @@ public class Clause implements  Comparable{
 	 *            the literal to remove
 	 */
 	public void removeLiteral(Literal lit) {
-        _literals.remove(lit);
+		if(_literals.contains(lit)) _literals.remove(lit);
 	}
 
 	/**
@@ -184,7 +184,10 @@ public class Clause implements  Comparable{
 	 * @return true if this clause is unit, false else
 	 */
 	public boolean isUnit() {
-        return _literals.size() == 1;
+		if(_literals.size() == 1) 
+			return true;
+		else 
+			return false;
 	}
 
 	/**

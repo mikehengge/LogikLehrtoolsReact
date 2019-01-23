@@ -69,9 +69,9 @@ public class Line_Double extends Line {
 		for(S_Calculation step : steps)
 		{
 			if(step instanceof  S_Res_Calculation)
-				calculations.add(step.toStringList());
+				calculations.add(((S_Res_Calculation)step).toStringList());
 			else if( step instanceof S_Sub_Calculation)
-				calculations.add(step.toStringList());
+				calculations.add(((S_Sub_Calculation)step).toStringList());
 		}
 	}
 

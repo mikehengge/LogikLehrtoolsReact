@@ -51,7 +51,7 @@ public class Literal
 	 * Negates the literal
 	 * @return new Literal with an inverse phase.
 	 */
-	public Literal negate() {return new Literal(_variable, !_phase);}
+	public Literal negate() {return new Literal(_variable, _phase ? false : true);}
 	
 	@Override
 	public int hashCode()

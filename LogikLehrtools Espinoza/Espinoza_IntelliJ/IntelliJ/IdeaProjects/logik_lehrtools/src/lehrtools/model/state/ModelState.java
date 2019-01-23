@@ -30,7 +30,7 @@ public enum ModelState {
 	 * of the enumeration.
 	 * @param name string representation of the constant.
 	 */
-    ModelState(String name)
+	private ModelState(String name)
 	{
 		_name = name;
 	}

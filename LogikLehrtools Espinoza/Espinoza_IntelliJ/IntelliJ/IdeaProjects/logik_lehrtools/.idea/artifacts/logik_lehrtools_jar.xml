@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="logik_lehrtools:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/logik_lehrtools_jar</output-path>
+    <root id="archive" name="logik_lehrtools.jar">
+      <element id="module-output" name="logik_lehrtools" />
+    </root>
+  </artifact>
+</component>

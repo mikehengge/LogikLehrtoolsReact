@@ -29,7 +29,10 @@ public class Falsum extends Formula {
 
 	@Override
 	public boolean syntEqual(Formula f) {
-        return f == this;
+		if (f == this)
+			return true;
+		else 
+			return false;
 		
 	}
 

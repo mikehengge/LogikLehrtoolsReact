@@ -30,7 +30,10 @@ public class Or extends BinaryFormula {
 		if (!(f instanceof Or))
 			return false;
 		Or formula = (Or) f;
-        return f1.syntEqual(formula.getF1()) && f2.syntEqual(formula.getF2());
+		if(f1.syntEqual(formula.getF1()) && f2.syntEqual(formula.getF2())) 
+			return true;
+		else
+			return false;
 	}
 
 	@Override

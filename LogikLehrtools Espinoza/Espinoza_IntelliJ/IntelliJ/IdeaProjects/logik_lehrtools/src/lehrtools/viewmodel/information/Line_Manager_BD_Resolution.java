@@ -142,7 +142,7 @@ public class Line_Manager_BD_Resolution {
 			Line_Double last_line = (Line_Double) _lines.get(_lines.size()-1);
 			if(contains_clause(subsumption.clause_1.toString(), last_line))
 			{
-				int index = get_index(subsumption.clause_1.toString(), last_line);
+				int index = get_index(subsumption.clause_1.toString(), (Line_Double) last_line);
 				last_line.active.get(index).set(false);
 			}
 

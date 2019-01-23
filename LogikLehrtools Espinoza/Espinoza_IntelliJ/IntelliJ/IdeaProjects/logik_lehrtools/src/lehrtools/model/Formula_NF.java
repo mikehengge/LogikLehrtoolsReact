@@ -84,9 +84,7 @@ public class Formula_NF {
 	 * Removes a given Clause. If the Clause is not contained ein the formula_NF, then nothing will be done.  
 	 * @param clause : Clause to be removed.
 	 */
-	public void remove_clause(Clause clause) {
-        _clauses.remove(clause);
-    }
+	public void remove_clause(Clause clause) { if (_clauses.contains(clause)) _clauses.remove(clause);}
 	/**
 	 * Merges two Formula_NF into a new one
 	 * @param formula : Formula_NF to be merged with.

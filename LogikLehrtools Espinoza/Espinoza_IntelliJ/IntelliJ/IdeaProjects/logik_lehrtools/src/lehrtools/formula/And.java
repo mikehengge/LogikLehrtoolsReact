@@ -32,7 +32,10 @@ public class And extends BinaryFormula {
 		if (!(f instanceof And))
 			return false;
 		And formula = (And) f;
-        return f1.syntEqual(formula.getF1()) && f2.syntEqual(formula.getF2());
+		if(f1.syntEqual(formula.getF1()) && f2.syntEqual(formula.getF2())) 
+			return true;
+		else
+			return false;
 	}
 
 	@Override

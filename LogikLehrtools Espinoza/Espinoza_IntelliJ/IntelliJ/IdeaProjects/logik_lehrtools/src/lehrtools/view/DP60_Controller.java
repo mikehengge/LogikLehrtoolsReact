@@ -1,13 +1,22 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by Fernflower decompiler)
+//
+
 package lehrtools.view;
 
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 import javafx.beans.binding.Bindings;
 import javafx.beans.property.BooleanProperty;
 import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
+import javafx.collections.ListChangeListener.Change;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.event.EventHandler;
@@ -17,8 +26,17 @@ import javafx.geometry.Rectangle2D;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.*;
-import javafx.scene.layout.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.MenuButton;
+import javafx.scene.control.MenuItem;
+import javafx.scene.control.ScrollPane;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.FlowPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.Priority;
+import javafx.scene.layout.VBox;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
 import lehrtools.miscellanious.Text_Writer;
@@ -27,619 +45,393 @@ import lehrtools.view.components.HBox_Factory;
 import lehrtools.viewmodel.DP60ViewModel;
 import lehrtools.viewmodel.ModelEvent;
 import lehrtools.viewmodel.information.Line;
-import lehrtools.viewmodel.information.Line_Composite;
 import lehrtools.viewmodel.information.Line_DP60;
-import lehrtools.viewmodel.information.Line_Double;
 
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-
-public class DP60_Controller
-{
-    /**
-     * A reference to the ViewModel
-     */
+public class DP60_Controller {
     private DP60ViewModel _view_model;
-    /**
-     * Class used to generate the HBox and Vbox for the Steps and calculations to be displayed respectively.
-     */
     private HBox_Factory _hbox_factory;
-    /**
-     * List that will by bind itself with the ViewModel.
-     * Will contain information about the steps executed by the algorithm.
-     */
     private ObservableList<Line> _steps_list;
-    /**
-     * List containing all the Clauses available for a Unit Clause step.
-     * The elements will be added as MenuItems menu_rule_1_over
-     */
     private ObservableList<String> _rule_01_clauses;
-    /**
-     * List containing all the Pure Literlas available for a Pure Literal step.
-     * The elements will be added as MenuItems menu_rule_2_over
-     */
     private ObservableList<String> _rule_02_literals;
-    /**
-     * List containing all the Variables available for a Variable Elimination step.
-     * The elements will be added as MenuItems menu_rule_3_over
-     */
     private ObservableList<String> _rule_03_variables;
-    /**
-     * Root Node
-     */
     @FXML
     private BorderPane root_node;
-    /**
-     * ScrollPane that enables the scrolling of the displayed results in the center node of the root node.
-     * Is a child node or center_Achor_pane.
-     */
     @FXML
     private ScrollPane results_scroll_pane;
-    /**
-     * Child Node or results_scroll_pane.
-     * This node will display the result of each step.
-     */
     @FXML
     private VBox vbox_steps;
-    /**
-     * Button that triggers a Unit Clause Step
-     */
     @FXML
     private Button button_rule_1;
-    /**
-     * Button that triggers a Pure Literal Step
-     */
     @FXML
     private Button button_rule_2;
-    /**
-     * MenuButton containing MenuItems that will trigger
-     * a Unit Clause step for a specific unit clause.
-     */
     @FXML
     private MenuButton menu_rule_1_over;
-    /**
-     * MenuButton containing MenuItems that will trigger
-     * a Pure Literal step for a specific pure literal.
-     */
     @FXML
     private MenuButton menu_rule_2_over;
-    /**
-     * MenuButton containing MenuItems that will trigger
-     * a Variable Elimination  step for a specific variable.
-     */
     @FXML
     private MenuButton menu_rule_3_over;
-    /**
-     * Button that will end the algorithm and switch the scene back to the Main Menu
-     */
     @FXML
     private Button button_end;
-    /**
-     * The minimize  control button.
-     */
     @FXML
     Label minimize;
-    /**
-     * The maximioze  control button.
-     */
     @FXML
     Label maximize;
-    /**
-     * The fullscreen  control button.
-     */
     @FXML
     Label fullscreen;
-    /**
-     * The close  control button.
-     */
     @FXML
     Label close;
-    // Right pane
-    /**
-     * Pane that will host the nodes containing the calculations for each step.
-     */
     @FXML
     private AnchorPane additional_info_pane;
-    /**
-     * Container that helps display the calculations
-     */
     @FXML
     private VBox additional_info;
-    /**
-     * ScrollPane that enables the scrolling of the displayed calculations .
-     */
     @FXML
     private ScrollPane additional_info_scrollpane;
-    /**
-     * Box that displays the calculation.
-     */
     @FXML
     private VBox additional_info_vbox;
-
-
-    /**
-     * Value that signals if the Stage is maximized.
-     */
     private boolean is_fullscreen;
-    /**
-     * Stores the width of the Stage before is maximized or is in fullscreen mode.
-     */
     private double previous_width;
-    /**
-     * Stores the height of the Stage before is maximized or is in fullscreen mode.
-     */
     private double previous_heigth;
-    /**
-     * Stores the x coordinate of the position of the Stage before is maximized or is in fullscreen mode.
-     */
     private double previous_x_pos;
-    /**
-     * Stores the y coordinate of the position of the Stage before is maximized or is in fullscreen mode.
-     */
     private double previous_y_pos;
-    /**
-     * Stores the position of the x coordinate of the cursor during a drag event.
-     * Is used to calculate the direction and distance the Stage is moved.
-     */
-    private double xOffset = 0;
-    /**
-     * Stores the position of the y coordinate of the cursor during a drag event.
-     * Is used to calculate the direction and distance the Stage is moved.
-     */
-    private double yOffset = 0;
-    /**
-     * Triggers a refreshes of all steps and calculations displayed.
-     */
-
+    private double xOffset = 0.0D;
+    private double yOffset = 0.0D;
     private BooleanProperty _redraw;
 
-
-    /**
-     * Sets up all EventHandlers and bindings.
-     * @param view_model ResolutionViewModel instance.
-     */
-    public void initialize_components(DP60ViewModel  view_model)
-    {
-        _view_model = view_model;
-        _hbox_factory = new HBox_Factory();
-
-        initialize_step_list();
-        initialize_root_node();
-        initialize_control_buttons();
-        initialize_menu_buttons();
-        initialize_calculation_pane();
-        initialize_redraw_event();
-        Bindings.bindContentBidirectional(_steps_list, _view_model.lines);
-        Bindings.bindContentBidirectional(_rule_01_clauses, _view_model.rule_01);
-        Bindings.bindContentBidirectional(_rule_02_literals, _view_model.rule_02);
-        Bindings.bindContentBidirectional(_rule_03_variables, _view_model.rule_03);
-
-        button_rule_1.visibleProperty().bind(menu_rule_1_over.visibleProperty());
-        button_rule_2.visibleProperty().bind(menu_rule_2_over.visibleProperty());
-        menu_rule_1_over.visibleProperty().bind(_view_model.rule_1_visible);
-        menu_rule_2_over.visibleProperty().bind(_view_model.rule_2_visible);
-        menu_rule_3_over.visibleProperty().bind(_view_model.rule_3_visible);
-        button_end.visibleProperty().bind(_view_model.end);
-
-        VBox.setVgrow(results_scroll_pane, Priority.ALWAYS);
-        vbox_steps.prefWidthProperty().bind(results_scroll_pane.widthProperty().subtract(15));
-        results_scroll_pane.vvalueProperty().bind(vbox_steps.heightProperty());
-
-
+    public DP60_Controller() {
     }
-    /**
-     * Values set when the application switches to this scene.
-     * Refreshes the positions and size the previous scene had.
-     * @param is_fullscreen informs if the scene was maximized or not.
-     * @param previous_width the with of the previous scene.
-     * @param previous_heigth the height ofthe previous scene
-     * @param previous_x_pos the position of the x coordinate of the previous scene
-     * @param previous_y_pos the position of the y coordinate of the previous scene
-     */
-    public void set_up_window_state(boolean is_fullscreen,
-                                    double previous_width,
-                                    double previous_heigth,
-                                    double previous_x_pos,
-                                    double previous_y_pos)
-    {
+
+    public void initialize_components(DP60ViewModel view_model) {
+        this._view_model = view_model;
+        this._hbox_factory = new HBox_Factory();
+        this.initialize_step_list();
+        this.initialize_root_node();
+        this.initialize_control_buttons();
+        this.initialize_menu_buttons();
+        this.initialize_calculation_pane();
+        this.initialize_redraw_event();
+        Bindings.bindContentBidirectional(this._steps_list, this._view_model.lines);
+        Bindings.bindContentBidirectional(this._rule_01_clauses, this._view_model.rule_01);
+        Bindings.bindContentBidirectional(this._rule_02_literals, this._view_model.rule_02);
+        Bindings.bindContentBidirectional(this._rule_03_variables, this._view_model.rule_03);
+        this.button_rule_1.visibleProperty().bind(this.menu_rule_1_over.visibleProperty());
+        this.button_rule_2.visibleProperty().bind(this.menu_rule_2_over.visibleProperty());
+        this.menu_rule_1_over.visibleProperty().bind(this._view_model.rule_1_visible);
+        this.menu_rule_2_over.visibleProperty().bind(this._view_model.rule_2_visible);
+        this.menu_rule_3_over.visibleProperty().bind(this._view_model.rule_3_visible);
+        this.button_end.visibleProperty().bind(this._view_model.end);
+        VBox.setVgrow(this.results_scroll_pane, Priority.ALWAYS);
+        this.vbox_steps.prefWidthProperty().bind(this.results_scroll_pane.widthProperty().subtract(15));
+        this.results_scroll_pane.vvalueProperty().bind(this.vbox_steps.heightProperty());
+    }
+
+    public void set_up_window_state(boolean is_fullscreen, double previous_width, double previous_heigth, double previous_x_pos, double previous_y_pos) {
         this.is_fullscreen = is_fullscreen;
         this.previous_width = previous_width;
         this.previous_heigth = previous_heigth;
         this.previous_x_pos = previous_x_pos;
         this.previous_y_pos = previous_y_pos;
-        Stage stage = ((Stage)root_node.getScene().getWindow());
-        if(is_fullscreen || stage.isMaximized() )
-            root_node.setRight(additional_info_pane);
-
-
-
-    }
-    /**
-     * Creates the EventHandler for StepList.
-     * When triggered this EvenHandler will add or remove content from
-     * the VBox containing te steps and the VBox containing the calculations
-     *
-     */
-    @SuppressWarnings("Duplicates")
-    private void initialize_step_list()
-    {
-        final List<Line> list = new ArrayList<>();
-        _steps_list =  FXCollections.observableList(list);
-
-        _steps_list.addListener((ListChangeListener<Line>) change -> {
-            if(!change.next()) return ;
-
-            if(change.wasAdded())
-            {
-                Line line =  _steps_list.get(_steps_list.size()-1);
-                HBox box = _hbox_factory.get_box(line);
-                vbox_steps.getChildren().add(box);
-
-                if(line instanceof Line_DP60)
-                {
-                    VBox column2 = (VBox) box.getChildren().get(1);
-                    Label calculation_label = (Label) column2.getChildren().get(1);
-                    ScrollPane scrollpane = (ScrollPane) column2.getChildren().get(2);
-                    column2.getChildren().remove(2);
-                    column2.getChildren().remove(1);
-                    additional_info_vbox.getChildren().add(calculation_label);
-                    VBox calculations = (VBox) scrollpane.getContent();
-                    addEventHandlersCalculations(calculations);
-                    additional_info_vbox.getChildren().add(calculations);
-
-                }
-            }
-            else if(change.wasRemoved())
-            {
-                vbox_steps.getChildren().clear();
-                additional_info_vbox.getChildren().clear();
-            }
-
-        });
-    }
-    /**
-     * Sets the functionality that enables the Stage to be dragged.
-     */
-    private void initialize_root_node()
-    {
-        root_node.setOnMousePressed(event -> {
-            xOffset = event.getSceneX();
-            yOffset = event.getSceneY();
-        });
-        root_node.setOnMouseDragged(event -> {
-            Stage stage = ((Stage)root_node.getScene().getWindow());
-            if(is_fullscreen ||stage.isMaximized()) return;
-            stage.setX(event.getScreenX() - xOffset);
-            stage.setY(event.getScreenY() - yOffset);
-        });
-    }
-
-    /**
-     * Initializes all MenuButtons. It also initializes _rule_01_clauses,
-     * _rule_02_literals and _rule_03_variables adding EventHanlders that update any change to the MenutItems
-     * of the MenuButtons menu_rule_1_over , menu_rule_2_over and menu_rule_3_over respectively.
-     *
-     */
-    private void initialize_menu_buttons()
-    {
-        final List<String> list_1 = new ArrayList<>();
-        _rule_01_clauses = FXCollections.observableList(list_1);
-        _rule_01_clauses.addListener(new ListChangeListener<>() {
-
-            @Override
-            public void onChanged(ListChangeListener.Change<? extends String> change) {
-                if (_rule_01_clauses.isEmpty())
-                    menu_rule_1_over.getItems().clear();
-                else {
-                    menu_rule_1_over.getItems().clear();
-                    for (String variable : _rule_01_clauses) {
-                        MenuItem item = new MenuItem();
-                        item.setText(variable);
-                        item.setOnAction(new EventHandler<>() {
-                            @Override
-                            public void handle(ActionEvent event) {
-                                _view_model.execute(new ModelEvent(this, ModelState.RULE_01_OVER, item.getText()));
-                            }
-                        });
-                        menu_rule_1_over.getItems().add(item);
-                    }
-                }
-
-
-            }
-        });
-
-        final List<String> list_2 = new ArrayList<>();
-        _rule_02_literals = FXCollections.observableList(list_2);
-        _rule_02_literals.addListener(new ListChangeListener<>() {
-
-            @Override
-            public void onChanged(ListChangeListener.Change<? extends String> change) {
-                if(_rule_02_literals.isEmpty())
-                    menu_rule_2_over.getItems().clear();
-                else
-                {
-                    menu_rule_2_over.getItems().clear();
-                    for(String variable : _rule_02_literals)
-                    {
-                        MenuItem item = new MenuItem();
-                        item.setText(variable);
-                        item.setOnAction(new EventHandler<>() {
-                            @Override
-                            public void handle(ActionEvent event) {
-                                _view_model.execute(new ModelEvent(this,ModelState.RULE_02_OVER, item.getText()));
-                            }
-                        });
-                        menu_rule_2_over.getItems().add(item);
-                    }
-                }
-
-
-            }
-        });
-
-        final List<String> list_3 = new ArrayList<>();
-        _rule_03_variables = FXCollections.observableList(list_3);
-        _rule_03_variables.addListener(new ListChangeListener<>() {
-
-            @Override
-            public void onChanged(ListChangeListener.Change<? extends String> change) {
-                if(_rule_03_variables.isEmpty())
-                    menu_rule_3_over.getItems().clear();
-                else
-                {
-                    menu_rule_3_over.getItems().clear();
-                    for(String variable : _rule_03_variables)
-                    {
-                        MenuItem item = new MenuItem();
-                        item.setText(variable);
-                        item.setOnAction(new EventHandler<>() {
-                            @Override
-                            public void handle(ActionEvent event) {
-                                _view_model.execute(new ModelEvent(this,ModelState.RULE_03, item.getText()));
-                            }
-                        });
-                        menu_rule_3_over.getItems().add(item);
-                    }
-                }
-
-
-            }
-        });
-        menu_rule_1_over.getItems().clear();
-        menu_rule_2_over.getItems().clear();
-        menu_rule_3_over.getItems().clear();
-    }
-
-    /**
-     * Sets the EventHandlers for the control buttons.
-     */
-    @SuppressWarnings("Duplicates")
-    private void initialize_control_buttons()
-    {
-        close.setOnMouseClicked(e -> ((Stage)root_node.getScene().getWindow()).close());
-        minimize.setOnMouseClicked(e -> ((Stage)root_node.getScene().getWindow()).setIconified(true));
-        maximize.setOnMouseClicked(e -> maximize_event() );
-        fullscreen.setOnMouseClicked(e -> fullscreen_event() );
-        previous_width = 1024;
-        previous_heigth = 786;
+        Stage stage = (Stage)this.root_node.getScene().getWindow();
+        if (is_fullscreen || stage.isMaximized()) {
+            this.root_node.setRight(this.additional_info_pane);
+        }
 
     }
 
-    /**
-     * Sets the bindings and grow properties for the Right Node of the root_node
-     * so theeah component has the optimal size.
-     */
-    private void initialize_calculation_pane()
-    {
-        VBox.setVgrow(additional_info_scrollpane, Priority.ALWAYS);
-        additional_info_vbox.prefWidthProperty().bind(additional_info_scrollpane.widthProperty().subtract(15));
-        additional_info_vbox.prefHeightProperty().bind(additional_info_scrollpane.heightProperty().subtract(2));
-        additional_info_scrollpane.vvalueProperty().bind(additional_info_vbox.heightProperty());
-
-        root_node.setRight(null);
-    }
-    /**
-     * Initializes and creates the EventHandler for the property _redraw.
-     * This EventHandler will clear all steps and calculations and
-     * from the GUI and generate them all again. This EventHandler is triggerd
-     * when a calculation was selected.
-     */
-    @SuppressWarnings("Duplicates")
-    private void initialize_redraw_event()
-    {
-        _redraw = new SimpleBooleanProperty(false);
-        _redraw.addListener((observable, oldValue, newValue) -> {
-            if(newValue)
-            {
-                vbox_steps.getChildren().clear();
-                additional_info_vbox.getChildren().clear();
-                for(Line line :_steps_list)
-                {
-                    HBox box = _hbox_factory.get_box(line);
-                    vbox_steps.getChildren().add(box);
-
-                    if(line instanceof Line_DP60)
-                    {
-                        VBox column2 = (VBox) box.getChildren().get(1);
-                        Label calculation_label = (Label) column2.getChildren().get(1);
-                        ScrollPane scrollpane = (ScrollPane) column2.getChildren().get(2);
+    private void initialize_step_list() {
+        List<Line> list = new ArrayList();
+        this._steps_list = FXCollections.observableList(list);
+        this._steps_list.addListener((ListChangeListener<Line>)change -> {
+            if (change.next()) {
+                if (change.wasAdded()) {
+                    Line line = (Line)this._steps_list.get(this._steps_list.size() - 1);
+                    HBox box = this._hbox_factory.get_box(line);
+                    this.vbox_steps.getChildren().add(box);
+                    if (line instanceof Line_DP60) {
+                        VBox column2 = (VBox)box.getChildren().get(1);
+                        Label calculation_label = (Label)column2.getChildren().get(1);
+                        ScrollPane scrollpane = (ScrollPane)column2.getChildren().get(2);
                         column2.getChildren().remove(2);
                         column2.getChildren().remove(1);
-                        additional_info_vbox.getChildren().add(calculation_label);
-                        VBox calculations = (VBox) scrollpane.getContent();
-                        addEventHandlersCalculations(calculations);
-                        additional_info_vbox.getChildren().add(calculations);
+                        this.additional_info_vbox.getChildren().add(calculation_label);
+                        VBox calculations = (VBox)scrollpane.getContent();
+                        this.addEventHandlersCalculations(calculations);
+                        this.additional_info_vbox.getChildren().add(calculations);
+                    }
+                } else if (change.wasRemoved()) {
+                    this.vbox_steps.getChildren().clear();
+                    this.additional_info_vbox.getChildren().clear();
+                }
 
+            }
+        });
+    }
+
+    private void initialize_root_node() {
+        this.root_node.setOnMousePressed((event) -> {
+            this.xOffset = event.getSceneX();
+            this.yOffset = event.getSceneY();
+        });
+        this.root_node.setOnMouseDragged((event) -> {
+            Stage stage = (Stage)this.root_node.getScene().getWindow();
+            if (!this.is_fullscreen && !stage.isMaximized()) {
+                stage.setX(event.getScreenX() - this.xOffset);
+                stage.setY(event.getScreenY() - this.yOffset);
+            }
+        });
+    }
+
+    private void initialize_menu_buttons() {
+        List<String> list_1 = new ArrayList();
+        this._rule_01_clauses = FXCollections.observableList(list_1);
+        this._rule_01_clauses.addListener(new ListChangeListener<Object>() {
+            public void onChanged(Change change) {
+                if (DP60_Controller.this._rule_01_clauses.isEmpty()) {
+                    DP60_Controller.this.menu_rule_1_over.getItems().clear();
+                } else {
+                    DP60_Controller.this.menu_rule_1_over.getItems().clear();
+                    Iterator var2 = DP60_Controller.this._rule_01_clauses.iterator();
+
+                    while(var2.hasNext()) {
+                        String variable = (String)var2.next();
+                        final MenuItem item = new MenuItem();
+                        item.setText(variable);
+                        item.setOnAction(new EventHandler<ActionEvent>() {
+                            public void handle(ActionEvent event) {
+                                DP60_Controller.this._view_model.execute(new ModelEvent(this, ModelState.RULE_01_OVER, item.getText()));
+                            }
+                        });
+                        DP60_Controller.this.menu_rule_1_over.getItems().add(item);
+                    }
+                }
+
+            }
+        });
+        List<String> list_2 = new ArrayList();
+        this._rule_02_literals = FXCollections.observableList(list_2);
+        this._rule_02_literals.addListener(new ListChangeListener<Object>() {
+            public void onChanged(Change change) {
+                if (DP60_Controller.this._rule_02_literals.isEmpty()) {
+                    DP60_Controller.this.menu_rule_2_over.getItems().clear();
+                } else {
+                    DP60_Controller.this.menu_rule_2_over.getItems().clear();
+                    Iterator var2 = DP60_Controller.this._rule_02_literals.iterator();
+
+                    while(var2.hasNext()) {
+                        String variable = (String)var2.next();
+                        final MenuItem item = new MenuItem();
+                        item.setText(variable);
+                        item.setOnAction(new EventHandler<ActionEvent>() {
+                            public void handle(ActionEvent event) {
+                                DP60_Controller.this._view_model.execute(new ModelEvent(this, ModelState.RULE_02_OVER, item.getText()));
+                            }
+                        });
+                        DP60_Controller.this.menu_rule_2_over.getItems().add(item);
+                    }
+                }
+
+            }
+        });
+        List<String> list_3 = new ArrayList();
+        this._rule_03_variables = FXCollections.observableList(list_3);
+        this._rule_03_variables.addListener(new ListChangeListener<Object>() {
+            public void onChanged(Change change) {
+                if (DP60_Controller.this._rule_03_variables.isEmpty()) {
+                    DP60_Controller.this.menu_rule_3_over.getItems().clear();
+                } else {
+                    DP60_Controller.this.menu_rule_3_over.getItems().clear();
+                    Iterator var2 = DP60_Controller.this._rule_03_variables.iterator();
+
+                    while(var2.hasNext()) {
+                        String variable = (String)var2.next();
+                        final MenuItem item = new MenuItem();
+                        item.setText(variable);
+                        item.setOnAction(new EventHandler<ActionEvent>() {
+                            public void handle(ActionEvent event) {
+                                DP60_Controller.this._view_model.execute(new ModelEvent(this, ModelState.RULE_03, item.getText()));
+                            }
+                        });
+                        DP60_Controller.this.menu_rule_3_over.getItems().add(item);
+                    }
+                }
+
+            }
+        });
+        this.menu_rule_1_over.getItems().clear();
+        this.menu_rule_2_over.getItems().clear();
+        this.menu_rule_3_over.getItems().clear();
+    }
+
+    private void initialize_control_buttons() {
+        this.close.setOnMouseClicked((e) -> {
+            ((Stage)this.root_node.getScene().getWindow()).close();
+        });
+        this.minimize.setOnMouseClicked((e) -> {
+            ((Stage)this.root_node.getScene().getWindow()).setIconified(true);
+        });
+        this.maximize.setOnMouseClicked((e) -> {
+            this.maximize_event();
+        });
+        this.fullscreen.setOnMouseClicked((e) -> {
+            this.fullscreen_event();
+        });
+        this.previous_width = 1024.0D;
+        this.previous_heigth = 786.0D;
+    }
+
+    private void initialize_calculation_pane() {
+        VBox.setVgrow(this.additional_info_scrollpane, Priority.ALWAYS);
+        this.additional_info_vbox.prefWidthProperty().bind(this.additional_info_scrollpane.widthProperty().subtract(15));
+        this.additional_info_vbox.prefHeightProperty().bind(this.additional_info_scrollpane.heightProperty().subtract(2));
+        this.additional_info_scrollpane.vvalueProperty().bind(this.additional_info_vbox.heightProperty());
+        this.root_node.setRight((Node)null);
+    }
+
+    private void initialize_redraw_event() {
+        this._redraw = new SimpleBooleanProperty(false);
+        this._redraw.addListener((observable, oldValue, newValue) -> {
+            if (newValue) {
+                this.vbox_steps.getChildren().clear();
+                this.additional_info_vbox.getChildren().clear();
+                Iterator var4 = this._steps_list.iterator();
+
+                while(var4.hasNext()) {
+                    Line line = (Line)var4.next();
+                    HBox box = this._hbox_factory.get_box(line);
+                    this.vbox_steps.getChildren().add(box);
+                    if (line instanceof Line_DP60) {
+                        VBox column2 = (VBox)box.getChildren().get(1);
+                        Label calculation_label = (Label)column2.getChildren().get(1);
+                        ScrollPane scrollpane = (ScrollPane)column2.getChildren().get(2);
+                        column2.getChildren().remove(2);
+                        column2.getChildren().remove(1);
+                        this.additional_info_vbox.getChildren().add(calculation_label);
+                        VBox calculations = (VBox)scrollpane.getContent();
+                        this.addEventHandlersCalculations(calculations);
+                        this.additional_info_vbox.getChildren().add(calculations);
                     }
                 }
             }
+
         });
-        _redraw.bindBidirectional(_view_model._redraw);
+        this._redraw.bindBidirectional(this._view_model._redraw);
     }
-    /**
-     * method called by the EventHandler of te maximize label.
-     */
-    @SuppressWarnings("Duplicates")
+
     private void maximize_event() {
-        Stage stage = ((Stage)root_node.getScene().getWindow());
-        //If Stage is maximized then return to original size
-        if(is_fullscreen)
-        {
-            stage.setWidth(previous_width);
-            stage.setHeight(previous_heigth);
-            stage.setX(previous_x_pos);
-            stage.setY(previous_y_pos);
-            is_fullscreen = false;
-            root_node.setRight(null);
-
-        }else
-        {
-            //if Stage is fullscreen return to original size
-            if(!stage.isMaximized())
-            {
-
-                previous_x_pos = stage.getX();
-                previous_y_pos = stage.getY();
+        Stage stage = (Stage)this.root_node.getScene().getWindow();
+        if (this.is_fullscreen) {
+            stage.setWidth(this.previous_width);
+            stage.setHeight(this.previous_heigth);
+            stage.setX(this.previous_x_pos);
+            stage.setY(this.previous_y_pos);
+            this.is_fullscreen = false;
+            this.root_node.setRight((Node)null);
+        } else {
+            if (!stage.isMaximized()) {
+                this.previous_x_pos = stage.getX();
+                this.previous_y_pos = stage.getY();
             }
 
-            //maximize Stage
             stage.setMaximized(false);
             Rectangle2D primaryScreenBounds = Screen.getPrimary().getVisualBounds();
             stage.setX(primaryScreenBounds.getMinX());
             stage.setY(primaryScreenBounds.getMinY());
             stage.setWidth(primaryScreenBounds.getWidth());
             stage.setHeight(primaryScreenBounds.getHeight());
-            is_fullscreen = true;
-            root_node.setRight(additional_info_pane);
-
-
+            this.is_fullscreen = true;
+            this.root_node.setRight(this.additional_info_pane);
         }
 
     }
 
-    /**
-     * Makes the window fit the whole screen
-     */
-    @SuppressWarnings("Duplicates")
-    private void fullscreen_event()
-    {
-        Stage stage = ((Stage)root_node.getScene().getWindow());
-        //If stage is in fullscreen mode return to original size
-        if(stage.isMaximized())
-        {
+    private void fullscreen_event() {
+        Stage stage = (Stage)this.root_node.getScene().getWindow();
+        if (stage.isMaximized()) {
             stage.setMaximized(false);
-            stage.setWidth(previous_width);
-            stage.setHeight(previous_heigth);
-            stage.setX(previous_x_pos);
-            stage.setY(previous_y_pos);
-            root_node.setRight(null);
-
-        }
-        else
-        {
-
-            if(is_fullscreen)
-                is_fullscreen = false;
-            else
-            {
-                previous_x_pos = stage.getX();
-                previous_y_pos = stage.getY();
-                root_node.setRight(additional_info_pane);
+            stage.setWidth(this.previous_width);
+            stage.setHeight(this.previous_heigth);
+            stage.setX(this.previous_x_pos);
+            stage.setY(this.previous_y_pos);
+            this.root_node.setRight((Node)null);
+        } else {
+            if (this.is_fullscreen) {
+                this.is_fullscreen = false;
+            } else {
+                this.previous_x_pos = stage.getX();
+                this.previous_y_pos = stage.getY();
+                this.root_node.setRight(this.additional_info_pane);
             }
+
             stage.setMaximized(true);
-
-
         }
 
     }
 
-    /**
-     * EventHandler for button_back
-     */
     @FXML
-    private void back_EventHandler(){_view_model.execute(new ModelEvent(this,ModelState.BACK,""));}
-    /**
-     * EventHandler for button_rule_1
-     */
+    private void back_EventHandler() {
+        this._view_model.execute(new ModelEvent(this, ModelState.BACK, ""));
+    }
+
     @FXML
-    private void rule1_EventHandler(){_view_model.execute(new ModelEvent(this,ModelState.RULE_01,""));}
-    /**
-     * EventHandler for button_rule_2
-     */
+    private void rule1_EventHandler() {
+        this._view_model.execute(new ModelEvent(this, ModelState.RULE_01, ""));
+    }
+
     @FXML
-    private void rule2_EventHandler(){_view_model.execute(new ModelEvent(this,ModelState.RULE_02,""));}
-    /**
-     * EventHandler for button_rule_3
-     */
+    private void rule2_EventHandler() {
+        this._view_model.execute(new ModelEvent(this, ModelState.RULE_02, ""));
+    }
+
     @FXML
-    private void rule3_EventHandler(){_view_model.execute(new ModelEvent(this,ModelState.RULE_03,""));}
-    /**
-     * Event Handler for  button_end.
-     */
+    private void rule3_EventHandler() {
+        this._view_model.execute(new ModelEvent(this, ModelState.RULE_03, ""));
+    }
+
     @FXML
-    private void endEventHandler(Event event)
-    {
-        Text_Writer.write_to_file(_steps_list);
-        //noinspection Duplicates
+    private void endEventHandler(Event event) {
+        Text_Writer.write_to_file(this._steps_list);
+
         try {
-            //Parent resolution_parent = FXMLLoader.load(getClass().getResource("/lehrtools/view/Main_Menu.fxml"));
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/lehrtools/view/Main_Menu.fxml"));
-            Parent parent =  loader.load();
-            Main_Menu_Controller controller = loader.getController();
-            controller.set_up_window_state(is_fullscreen, previous_width, previous_heigth, previous_x_pos, previous_y_pos);
+            FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/lehrtools/view/Main_Menu.fxml"));
+            Parent parent = (Parent)loader.load();
+            Main_Menu_Controller controller = (Main_Menu_Controller)loader.getController();
+            controller.set_up_window_state(this.is_fullscreen, this.previous_width, this.previous_heigth, this.previous_x_pos, this.previous_y_pos);
             Scene scene = new Scene(parent);
-            Stage app_stage = (Stage) ((Node) event.getSource() ).getScene().getWindow();
+            Stage app_stage = (Stage)((Node)event.getSource()).getScene().getWindow();
             app_stage.hide();
             app_stage.setScene(scene);
             app_stage.show();
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
+        } catch (IOException var7) {
+            var7.printStackTrace();
         }
+
     }
 
-
-    /**
-     * Adds Eventhanlders to all calculations displayed in the right pane of the GUI.
-     * This EvenHanlders will trigger the "Highlighting" of teh Clauses involved in the calculation.
-     * @param vbox Vbox instance containing the calculations.
-     */
-    @SuppressWarnings("Duplicates")
-    private void addEventHandlersCalculations(VBox vbox)
-    {
-        if(vbox.getChildren().size()>0)
-        {
-            for(int i = 0;i < vbox.getChildren().size();i++)
-            {
-                FlowPane flowPane = (FlowPane) vbox.getChildren().get(i);
-                flowPane.setOnMouseClicked( event -> {
+    private void addEventHandlersCalculations(VBox vbox) {
+        if (vbox.getChildren().size() > 0) {
+            for(int i = 0; i < vbox.getChildren().size(); ++i) {
+                FlowPane flowPane = (FlowPane)vbox.getChildren().get(i);
+                flowPane.setOnMouseClicked((event) -> {
                     String text = "";
-                    for(Node node : flowPane.getChildren())
-                        text = text+ get_node_text(node);
-                    _view_model.execute(new ModelEvent(this,ModelState.SHOW_CALCULATION,text));
-                });
 
+                    Node node;
+                    for(Iterator var4 = flowPane.getChildren().iterator(); var4.hasNext(); text = text + this.get_node_text(node)) {
+                        node = (Node)var4.next();
+                    }
+
+                    this._view_model.execute(new ModelEvent(this, ModelState.SHOW_CALCULATION, text));
+                });
             }
         }
+
     }
-    /**
-     * Gets the text displayed in a Nodeinstance.
-     * @param node  Node isntance.
-     * @return String
-     */
-    @SuppressWarnings("Duplicates")
-    private String get_node_text(Node node)
-    {
-        if(node instanceof HBox)
-        {
-            Node node1 = ((HBox) node).getChildren().get(0);
-            Node node2 = ((HBox) node).getChildren().get(1);
+
+    private String get_node_text(Node node) {
+        if (node instanceof HBox) {
+            Node node1 = (Node)((HBox)node).getChildren().get(0);
+            Node node2 = (Node)((HBox)node).getChildren().get(1);
             return ((Label)node1).getText() + ((Label)node2).getText();
+        } else {
+            return ((Label)node).getText();
         }
-        else
-            return ((Label) node).getText();
     }
 }
-

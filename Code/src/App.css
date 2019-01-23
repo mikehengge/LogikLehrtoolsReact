@@ -1,75 +1,90 @@
 .App {
   text-align: center;
+  margin:auto;
+  margin-top: 10vh;
 }
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+  height: 10vmin;
 }
 
-.test {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
 body {
   font: 14px "Century Gothic", Futura, sans-serif;
-  margin: 20px;
+}
+
+.button {
+  height: 60px;
+  background-color: #ffde7c;
+  border: none;
+  color: black;
+  padding: 20px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  margin: 3px 70px;
+  cursor: pointer;
+}
+
+.button2 {
+  background-color: #ffde7c;
+  border: none;
+  color: black;
+  width: 120px;
+  padding: 20px 0px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 5px;
+  font-size: 16px;
+  margin: 10px 20px;
+  cursor: pointer;
+}
+
+.introduction {
+  color:white;
+  text-align: center;
+  display: inline-block;
+  width:60vw;
+  margin: 30px;
+  padding: 40px;
+  vertical-align: text-top;
+}
+
+input[type=text], select {
+  width: 50vw;
+  padding: 20px 14px;
+  margin: 30px -80px;
+  margin-left: 90px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding-right: 80px;
+}
+
+input[type="submit"] {
+    margin-left: 80px;
+    height: 20px;
+    width: 50px;
+}
+
+.menu {
+  display: inline-block;
+  border-radius: 0px;
+  box-sizing: border-box;
+  padding-right: 0px;
 }
 
 ol, ul {
   padding-left: 30px;
 }
 
-.board-row:after {
-  clear: both;
-  content: "";
-  display: table;
-}
-
 .status {
   margin-bottom: 10px;
-}
-
-.square {
-  background: #fff;
-  border: 1px solid #999;
-  float: left;
-  font-size: 24px;
-  font-weight: bold;
-  line-height: 34px;
-  height: 34px;
-  margin-right: -1px;
-  margin-top: -1px;
-  padding: 0;
-  text-align: center;
-  width: 34px;
-}
-
-.square:focus {
-  outline: none;
-}
-
-.kbd-navigation .square:focus {
-  background: #ddd;
-}
-
-.game {
-  display: flex;
-  flex-direction: row;
-}
-
-.game-info {
-  width: 100%;
 }
 
 @keyframes App-logo-spin {

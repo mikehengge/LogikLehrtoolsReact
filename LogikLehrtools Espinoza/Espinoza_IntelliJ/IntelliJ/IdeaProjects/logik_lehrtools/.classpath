@@ -2,11 +2,7 @@
 <classpath>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="lib" path="lib/apiguardian-api-1.0.0.jar"/>
+	<classpathentry kind="src" path="Tests"/>
 	<classpathentry kind="lib" path="lib/junit-jupiter-api-5.0.0.jar"/>
-	<classpathentry kind="lib" path="lib/junit-platform-commons-1.0.0.jar"/>
-	<classpathentry kind="lib" path="lib/opentest4j-1.0.0.jar"/>
-	<classpathentry kind="lib" path="out/artifacts/JavaFXApp/JavaFXApp.jar"/>
-	<classpathentry kind="lib" path="out/artifacts/logik_lehrtools/logik_lehrtools.jar"/>
 	<classpathentry kind="output" path="out/production/logik_lehrtools"/>
 </classpath>

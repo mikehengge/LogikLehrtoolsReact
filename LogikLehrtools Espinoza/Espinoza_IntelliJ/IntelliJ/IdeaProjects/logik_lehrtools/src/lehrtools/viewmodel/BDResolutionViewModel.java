@@ -124,8 +124,8 @@ public class BDResolutionViewModel extends Observer {
 	private void state_subsumption(ResolutionState state)
 	{
 		_line_manager.add(state.steps.getLast());
-		_forward.set(!state.forward_subsumption);
-		_backward.set(!state.backward_subsumption);
+		_forward.set(state.forward_subsumption ? false:true);
+		_backward.set(state.backward_subsumption ? false:true);
 	}
 
 	/**
@@ -176,8 +176,8 @@ public class BDResolutionViewModel extends Observer {
 		if(state.back_step_state == ModelState.SUBSUMPTION)
 		{
 			_resolution.setValue(false);
-			_forward.setValue(!state.forward_subsumption);
-			_backward.setValue(!state.backward_subsumption);
+			_forward.setValue(state.forward_subsumption ? false :true);
+			_backward.setValue(state.backward_subsumption ? false :true);
 		}
 		else
 		{

@@ -157,7 +157,7 @@ public class Line_Manager_Resolution {
         selected_parents_line_index = find_parents(selected_resolvent_line_index);
         //Convert parent line into Line_Composite(For Resolution)
         Line_Composite parents_line = (Line_Composite) _lines.get(selected_parents_line_index);
-        S_Res_Calculation res_calculation = calculation;
+        S_Res_Calculation res_calculation = (S_Res_Calculation) calculation;
 
 
         selected_resolvent_index = resolvent_line.clauses.indexOf(calculation.clause_1.toString());

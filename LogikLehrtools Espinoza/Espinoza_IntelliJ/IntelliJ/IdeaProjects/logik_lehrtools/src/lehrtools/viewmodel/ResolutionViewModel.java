@@ -176,8 +176,8 @@ public class ResolutionViewModel extends Observer{
 		_manage.add(state.steps.getLast());
 		_resolution.setValue(false);
 		_resolution_over.setValue(false);
-		_forward.setValue(!state.forward_subsumption);
-		_backward.setValue(!state.backward_subsumption);
+		_forward.setValue(state.forward_subsumption ? false :true);
+		_backward.setValue(state.backward_subsumption ? false :true);
 		_end.setValue(false);
 		_proof = state.proof;
 		_vars.clear();
@@ -237,8 +237,8 @@ public class ResolutionViewModel extends Observer{
 		{
 			_resolution.setValue(false);
 			_resolution_over.setValue(false);
-			_forward.setValue(!state.forward_subsumption);
-			_backward.setValue(!state.backward_subsumption);
+			_forward.setValue(state.forward_subsumption ? false :true);
+			_backward.setValue(state.backward_subsumption ? false :true);
 		}
 		else
 		{

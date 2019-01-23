@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="logik_lehrtools" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="a7f018a5-f191-4ae7-9108-c2f5fe590103" name="Default Changelist" comment="" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="" />
+    <ignored path="JavaFxApplication.iws" />
+    <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -9,160 +16,355 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ErrorTreeViewConfiguration">
-    <option name="hideWarnings" value="true" />
-    <option name="HIDE_WARNINGS" value="true" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="DebuggerManager">
+    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true" converted="true">
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </breakpoint_any>
+    <ui_properties converted="true" />
+    <breakpoint_rules converted="true" />
   </component>
   <component name="FUSProjectUsageTrigger">
-    <session id="129846604">
+    <session id="-1527179173">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="6" />
-          <entry key="project.open.time.13" value="1" />
-          <entry key="project.open.time.16" value="1" />
-          <entry key="project.open.time.4" value="1" />
-          <entry key="project.open.time.47" value="1" />
-          <entry key="project.open.time.51" value="1" />
-          <entry key="project.open.time.54" value="1" />
-          <entry key="project.opened" value="6" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="java" value="44" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="JAVA" value="44" />
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.14" value="1" />
+          <entry key="project.open.time.21" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="fxml" value="1" />
-          <entry key="java" value="7" />
+          <entry key="class" value="1" />
+          <entry key="java" value="5" />
+          <entry key="txt" value="1" />
+          <entry key="userlibraries" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="7" />
-          <entry key="XML" value="1" />
+          <entry key="CLASS" value="1" />
+          <entry key="JAVA" value="5" />
+          <entry key="PLAIN_TEXT" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="37" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="37" />
         </counts>
       </usages-collector>
     </session>
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="JavaFxApplication" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/lehrtools/view/DP60_Controller.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1683">
+              <caret line="142" column="69" selection-start-line="142" selection-start-column="69" selection-end-line="142" selection-end-column="69" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/lehrtools/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="459">
-              <caret line="33" column="10" selection-start-line="33" selection-start-column="10" selection-end-line="33" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/javafx-src.zip!/javafx/application/Application.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3587">
-              <caret line="246" column="13" selection-start-line="246" selection-start-column="13" selection-end-line="246" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/lehrtools/view/ResolutionController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6052">
-              <caret line="395" column="21" selection-start-line="395" selection-start-column="21" selection-end-line="395" selection-end-column="21" />
+              <caret line="33" column="12" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/lehrtools/view/DP60_Controller.java">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/javafx-src.zip!/javafx/application/Application.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="412">
-              <caret line="327" column="59" selection-start-line="327" selection-start-column="59" selection-end-line="327" selection-end-column="59" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/lehrtools/formula/And.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="969">
-              <caret line="73" selection-start-line="73" selection-end-line="73" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/lehrtools/view/BD_Resolution_Controller.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6970">
-              <caret line="451" column="40" selection-start-line="451" selection-start-column="40" selection-end-line="451" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/lehrtools/model/BDResolution.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="107">
-              <caret line="14" column="87" lean-forward="true" selection-start-line="14" selection-start-column="87" selection-end-line="14" selection-end-column="87" />
+            <state relative-caret-position="442">
+              <caret line="240" column="9" selection-start-line="240" selection-start-column="9" selection-end-line="240" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit5 Test Class" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>simple_hbox</find>
+      <find>simple_des</find>
+      <find>scroll_pane</find>
+      <find>title_l</find>
+      <find>set_language_info</find>
+      <find>resolutio</find>
+      <find>result</find>
+      <find>pane_center_textfield</find>
+      <find>resolution_calculation</find>
+      <find>de</find>
+      <find>defa</find>
+      <find>padd</find>
+      <find>calcula</find>
+      <find>inactive</find>
+      <find>proof</find>
+      <find>END</find>
+      <find>mini</find>
+      <find>wäh</find>
+      <find>eingabe</find>
+      <find>nicht-tautologische</find>
+      <find>alle</find>
+      <find>Unit</find>
+      <find>label_</find>
+    </findStrings>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/src/lehrtools/formula/And.java" />
+        <option value="$PROJECT_DIR$/src/lehrtools/model/DP60_Utility.java" />
+        <option value="$PROJECT_DIR$/src/lehrtools/formula/Formula.java" />
+        <option value="$PROJECT_DIR$/src/lehrtools/model/state/DP60_Log.java" />
+        <option value="$PROJECT_DIR$/src/lehrtools/model/state/ResolutionLog.java" />
+        <option value="$PROJECT_DIR$/src/lehrtools/model/state/BDLog.java" />
+        <option value="$PROJECT_DIR$/src/lehrtools/model/state/S_Calculation.java" />
+        <option value="$PROJECT_DIR$/src/lehrtools/model/state/S_DP_Calculation.java" />
+        <option value="$PROJECT_DIR$/src/lehrtools/model/state/S_Res_Calculation.java" />
+        <option value="$PROJECT_DIR$/src/lehrtools/model/state/S_Sub_Calculation.java" />
+        <option value="$PROJECT_DIR$/src/lehrtools/model/state/State_DP.java" />
+        <option value="$PROJECT_DIR$/src/lehrtools/model/state/ResolutionState.java" />
+        <option value="$PROJECT_DIR$/src/lehrtools/model/state/Step.java" />
+        <option value="$PROJECT_DIR$/src/lehrtools/model/state/Step_DP.java" />
+        <option value="$PROJECT_DIR$/src/lehrtools/model/state/Step_End.java" />
+        <option value="$PROJECT_DIR$/src/lehrtools/model/state/Step_Resolution_Over.java" />
+        <option value="$PROJECT_DIR$/src/lehrtools/model/state/Step_Start.java" />
+        <option value="$PROJECT_DIR$/src/lehrtools/model/state/Step_Resolution.java" />
+        <option value="$PROJECT_DIR$/src/lehrtools/model/state/Step_Subsumption.java" />
+        <option value="$PROJECT_DIR$/src/lehrtools/model/Clause.java" />
+        <option value="$PROJECT_DIR$/src/lehrtools/model/Formula_NF.java" />
+        <option value="$PROJECT_DIR$/src/lehrtools/model/ResolutionUtility.java" />
+        <option value="$PROJECT_DIR$/src/lehrtools/model/BDResolution.java" />
+        <option value="$PROJECT_DIR$/src/lehrtools/model/DP60.java" />
+        <option value="$PROJECT_DIR$/src/lehrtools/model/Resolution.java" />
+        <option value="$PROJECT_DIR$/src/lehrtools/view/components/HBox_Factory.java" />
+        <option value="$PROJECT_DIR$/src/lehrtools/view/components/Tree_Generator.java" />
+        <option value="$PROJECT_DIR$/src/lehrtools/model/state/ModelState.java" />
+        <option value="$PROJECT_DIR$/src/lehrtools/viewmodel/information/Line.java" />
+        <option value="$PROJECT_DIR$/src/lehrtools/viewmodel/information/Line_Simple.java" />
+        <option value="$PROJECT_DIR$/src/lehrtools/viewmodel/information/Line_BD_Resolution.java" />
+        <option value="$PROJECT_DIR$/src/lehrtools/viewmodel/information/Line_Double.java" />
+        <option value="$PROJECT_DIR$/src/lehrtools/viewmodel/information/Line_Composite.java" />
+        <option value="$PROJECT_DIR$/src/lehrtools/viewmodel/information/Line_DP60.java" />
+        <option value="$PROJECT_DIR$/src/lehrtools/viewmodel/information/Line_Manager_BD_Resolution.java" />
+        <option value="$PROJECT_DIR$/src/lehrtools/viewmodel/information/Line_Manager_Resolution.java" />
+        <option value="$PROJECT_DIR$/src/lehrtools/viewmodel/information/Line_Manager_DP60.java" />
+        <option value="$PROJECT_DIR$/src/lehrtools/viewmodel/Observer.java" />
+        <option value="$PROJECT_DIR$/src/lehrtools/viewmodel/Subject.java" />
+        <option value="$PROJECT_DIR$/src/lehrtools/viewmodel/ModelEvent.java" />
+        <option value="$PROJECT_DIR$/src/lehrtools/model/state/State.java" />
+        <option value="$PROJECT_DIR$/src/lehrtools/formula/parser/InputLanguages.xml" />
+        <option value="$PROJECT_DIR$/src/lehrtools/view/Main_Menu_Controller.java" />
+        <option value="$PROJECT_DIR$/src/lehrtools/viewmodel/information/Line_Factory.java" />
         <option value="$PROJECT_DIR$/src/lehrtools/view/ResolutionController.java" />
+        <option value="$PROJECT_DIR$/src/lehrtools/view/BD_Resolution_Controller.java" />
+        <option value="$PROJECT_DIR$/src/lehrtools/miscellanious/Text_Writer.java" />
+        <option value="$PROJECT_DIR$/src/lehrtools/viewmodel/ResolutionViewModel.java" />
+        <option value="$PROJECT_DIR$/src/lehrtools/viewmodel/DP60ViewModel.java" />
+        <option value="$PROJECT_DIR$/src/lehrtools/viewmodel/BDResolutionViewModel.java" />
         <option value="$PROJECT_DIR$/src/lehrtools/view/DP60_Controller.java" />
       </list>
     </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-10" />
     <option name="y" value="-10" />
-    <option name="width" value="1750" />
-    <option name="height" value="970" />
+    <option name="width" value="1614" />
+    <option name="height" value="878" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
+      <pane id="Scope" />
+      <pane id="PackagesPane">
         <subPane>
           <expand>
             <path>
-              <item name="logik_lehrtools" type="b2602c69:ProjectViewProjectNode" />
-              <item name="logik_lehrtools" type="462c0819:PsiDirectoryNode" />
+              <item name="logik_lehrtools" type="58d84e3e:PackageViewProjectNode" />
+              <item name="logik_lehrtools" type="616d4139:PackageViewModuleNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="logik_lehrtools2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="logik_lehrtools" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="logik_lehrtools2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="logik_lehrtools" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="logik_lehrtools2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="logik_lehrtools" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="logik_lehrtools2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="logik_lehrtools" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="lehrtools" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="true" />
+    <property name="GoToClass.includeLibraries" value="false" />
+    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="OverrideImplement.combined" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541590962658" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546976604467" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="dynamic.classpath" value="false" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="recentsLimit" value="5" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="lehrtools.viewmodel" />
+      <recent name="lehrtools.model" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\IntelliJ\IdeaProjects\logik_lehrtools\src\lehrtools\view" />
+      <recent name="F:\IntelliJ\IdeaProjects\logik_lehrtools\src\lehrtools\view\icons" />
+      <recent name="F:\IntelliJ\IdeaProjects\logik_lehrtools\src\lehrtools" />
+      <recent name="F:\IntelliJ\IdeaProjects\logik_lehrtools" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="lehrtools.model.state" />
+      <recent name="lehrtools.view" />
+      <recent name="lehrtools.model" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="lehrtools.model.state" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\IntelliJ\IdeaProjects\logik_lehrtools\src\lehrtools\view" />
+      <recent name="F:\IntelliJ\IdeaProjects\logik_lehrtools\src\lehrtools\view\icons" />
+      <recent name="F:\IntelliJ\IdeaProjects\logik_lehrtools\Tests\lehrtools\model" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -176,79 +378,319 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.Main">
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
+      <method />
+    </configuration>
+    <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
+      <Host>localhost</Host>
+      <Port>5050</Port>
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="lehrtools.Main" />
       <module name="logik_lehrtools" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="lehrtools.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClauseTest.comparable_01Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="logik_lehrtools" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="lehrtools.model.state.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="lehrtools.model" />
+      <option name="MAIN_CLASS_NAME" value="lehrtools.model.ClauseTest" />
+      <option name="METHOD_NAME" value="comparable_01Test" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClauseTest.comparable_02Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="logik_lehrtools" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="lehrtools.model.state.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="lehrtools.model" />
+      <option name="MAIN_CLASS_NAME" value="lehrtools.model.ClauseTest" />
+      <option name="METHOD_NAME" value="comparable_02Test" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClauseTest.comparable_03Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="logik_lehrtools" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="lehrtools.model.state.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="lehrtools.model" />
+      <option name="MAIN_CLASS_NAME" value="lehrtools.model.ClauseTest" />
+      <option name="METHOD_NAME" value="comparable_03Test" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DP60_UtilityRule01Rule03Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="logik_lehrtools" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="lehrtools.model.state.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="lehrtools.model" />
+      <option name="MAIN_CLASS_NAME" value="lehrtools.model.DP60_UtilityRule01Rule03Test" />
+      <option name="METHOD_NAME" value="rule_01_01" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DP60_UtilityRule01Rule03Test.rule_01_01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="logik_lehrtools" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="lehrtools.model.state.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="lehrtools.model" />
+      <option name="MAIN_CLASS_NAME" value="lehrtools.model.DP60_UtilityRule01Rule03Test" />
+      <option name="METHOD_NAME" value="rule_01_01" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file id="idea.log" enabled="true" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.ClauseTest.comparable_01Test" />
+      <item itemvalue="JUnit.ClauseTest.comparable_02Test" />
+      <item itemvalue="JUnit.ClauseTest.comparable_03Test" />
+      <item itemvalue="JUnit.DP60_UtilityRule01Rule03Test.rule_01_01" />
+      <item itemvalue="JUnit.DP60_UtilityRule01Rule03Test" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.DP60_UtilityRule01Rule03Test" />
+        <item itemvalue="JUnit.DP60_UtilityRule01Rule03Test.rule_01_01" />
+        <item itemvalue="JUnit.ClauseTest.comparable_03Test" />
+        <item itemvalue="JUnit.ClauseTest.comparable_02Test" />
+        <item itemvalue="JUnit.ClauseTest.comparable_01Test" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="StructureViewFactory">
+    <option name="AUTOSCROLL_FROM_SOURCE" value="true" />
+    <option name="ACTIVE_ACTIONS" value=",SHOW_PROPERTIES" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="a7f018a5-f191-4ae7-9108-c2f5fe590103" name="Default Changelist" comment="" />
-      <created>1541418544157</created>
+      <changelist id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="" />
+      <created>1359379246138</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1541418544157</updated>
-      <workItem from="1541418548125" duration="381000" />
-      <workItem from="1541590277670" duration="989000" />
-      <workItem from="1542006196447" duration="287000" />
-      <workItem from="1542006815983" duration="185000" />
-      <workItem from="1542173859841" duration="48000" />
-      <workItem from="1542174037615" duration="170000" />
+      <updated>1359379246138</updated>
+      <workItem from="1359379250712" duration="1302000" />
+      <workItem from="1528877995354" duration="12409000" />
+      <workItem from="1528955920374" duration="6631000" />
+      <workItem from="1529044160066" duration="8444000" />
+      <workItem from="1529058380974" duration="8964000" />
+      <workItem from="1529165376347" duration="613000" />
+      <workItem from="1529167036009" duration="17763000" />
+      <workItem from="1529311344582" duration="50496000" />
+      <workItem from="1529650896430" duration="87105000" />
+      <workItem from="1530176375330" duration="30700000" />
+      <workItem from="1530288995509" duration="28000" />
+      <workItem from="1530289221665" duration="4988000" />
+      <workItem from="1530345567282" duration="32232000" />
+      <workItem from="1530459227434" duration="10181000" />
+      <workItem from="1530512600914" duration="111727000" />
+      <workItem from="1531206789757" duration="10034000" />
+      <workItem from="1531289536143" duration="33205000" />
+      <workItem from="1531472948362" duration="10403000" />
+      <workItem from="1531581360523" duration="3000" />
+      <workItem from="1531642444328" duration="18771000" />
+      <workItem from="1531900251576" duration="5169000" />
+      <workItem from="1531981777382" duration="16648000" />
+      <workItem from="1532418129420" duration="60962000" />
+      <workItem from="1532792758831" duration="86358000" />
+      <workItem from="1533223102423" duration="6836000" />
+      <workItem from="1533578050103" duration="4199000" />
+      <workItem from="1533649637146" duration="2192000" />
+      <workItem from="1546961552197" duration="896000" />
+      <workItem from="1546970282131" duration="2642000" />
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="ClauseTest_comparable_03Test - 2018.06.28 at 16h 07m 22s.xml">
+      <configuration name="ClauseTest.comparable_03Test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ClauseTest - 2018.06.28 at 16h 07m 26s.xml">
+      <configuration name="ClauseTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ClauseTest - 2018.06.28 at 16h 07m 35s.xml">
+      <configuration name="ClauseTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ClauseTest_comparable_01Test - 2018.06.28 at 16h 55m 22s.xml">
+      <configuration name="ClauseTest.comparable_01Test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ClauseTest_comparable_02Test - 2018.06.28 at 16h 55m 29s.xml">
+      <configuration name="ClauseTest.comparable_02Test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ClauseTest_comparable_03Test - 2018.06.28 at 16h 55m 35s.xml">
+      <configuration name="ClauseTest.comparable_03Test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ClauseTest_comparable_03Test - 2018.06.28 at 16h 55m 57s.xml">
+      <configuration name="ClauseTest.comparable_03Test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DP60_UtilityRule01Rule03Test_rule_01_01 - 2018.07.12 at 09h 43m 05s.xml">
+      <configuration name="DP60_UtilityRule01Rule03Test.rule_01_01" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DP60_UtilityRule01Rule03Test - 2018.07.12 at 09h 43m 10s.xml">
+      <configuration name="DP60_UtilityRule01Rule03Test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DP60_UtilityRule01Rule03Test - 2018.07.12 at 09h 44m 07s.xml">
+      <configuration name="DP60_UtilityRule01Rule03Test" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2060000" />
+    <option name="totallyTimeSpent" value="641901000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12416107" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.56323063" visible="true" weight="0.21275167" />
+      <window_info id="Designer" order="1" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="Image Layers" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.15602838" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32772166" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946293" weight="0.33333334" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39599556" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" visible="true" weight="0.29929078" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32997763" />
+      <window_info anchor="bottom" id="Profiler" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50053704" side_tool="true" weight="0.335578" />
+      <window_info anchor="bottom" id="Application Servers" order="9" />
+      <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Problems" order="11" />
+      <window_info anchor="bottom" id="Changes" order="12" />
+      <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="14" weight="0.32996634" />
+      <window_info anchor="bottom" id="Messages" order="15" weight="0.26241136" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" show_stripe_button="false" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Database" order="5" />
-      <window_info anchor="right" id="Theme Preview" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Maven Projects" order="8" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info anchor="right" id="Maven Projects" order="4" show_stripe_button="false" weight="0.32995737" />
+      <window_info anchor="right" id="Database" order="5" show_stripe_button="false" weight="0.32995737" />
+      <window_info anchor="right" id="JetGradle" order="6" />
+      <window_info anchor="right" id="Palette" order="7" />
+      <window_info anchor="right" id="Structure" order="8" sideWeight="0.4367694" side_tool="true" weight="0.13355705" />
+      <window_info anchor="right" id="Capture Analysis" order="9" />
+      <window_info anchor="right" id="Theme Preview" order="10" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -257,70 +699,564 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
+    <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <default-breakpoints>
+        <breakpoint enabled="true" type="javascript-exception">
+          <properties />
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="watch">
+      <expression>
+        <expression-string>vbox_steps.children</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>hbox children</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/lehrtools/view/DP60_View.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
+    <entry file="file://$PROJECT_DIR$/src/lehrtools/model/state/Step.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="77" column="41" selection-start-line="77" selection-start-column="41" selection-end-line="77" selection-end-column="41" />
+        <state relative-caret-position="136">
+          <caret line="8" column="43" lean-forward="true" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/javafx-src.zip!/javafx/collections/ListChangeListener.java">
+    <entry file="file://$PROJECT_DIR$/src/lehrtools/model/state/Step_Start.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="17" column="63" selection-start-line="17" selection-start-column="63" selection-end-line="17" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lehrtools/model/state/Step_Resolution_Over.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="29" column="97" selection-start-line="29" selection-start-column="97" selection-end-line="29" selection-end-column="97" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lehrtools/model/state/Step_Subsumption.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="35" column="106" selection-start-line="35" selection-start-column="106" selection-end-line="35" selection-end-column="106" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lehrtools/model/Literal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-795">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lehrtools/model/Clause.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="329" column="84" selection-start-line="329" selection-start-column="84" selection-end-line="329" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lehrtools/model/Formula_NF.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-284">
+          <caret line="196" column="36" selection-start-line="196" selection-start-column="36" selection-end-line="196" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lehrtools/model/ResolutionUtility.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1043">
+          <caret line="94" column="61" selection-start-line="94" selection-start-column="61" selection-end-line="94" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lehrtools/model/BDResolution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="103">
+          <caret line="326" column="4" selection-start-line="326" selection-start-column="4" selection-end-line="329" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lehrtools/model/Resolution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-47">
+          <caret line="434" column="7" lean-forward="true" selection-start-line="434" selection-start-column="7" selection-end-line="434" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lehrtools/view/components/Tree_Generator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="134" column="57" selection-start-line="134" selection-start-column="57" selection-end-line="134" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lehrtools/viewmodel/information/Line_BD_Resolution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="11" column="15" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lehrtools/model/state/S_DP_Calculation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="40" column="23" selection-start-line="40" selection-start-column="23" selection-end-line="40" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lehrtools/viewmodel/information/Line_Simple.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="19" column="79" lean-forward="true" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lehrtools/viewmodel/information/Line_Double.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="20" column="30" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lehrtools/viewmodel/information/Line_Composite.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="18" column="4" lean-forward="true" selection-start-line="18" selection-start-column="4" selection-end-line="20" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lehrtools/viewmodel/information/Line.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
-          <caret line="38" column="17" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="35" />
+          <caret line="14" column="64" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lehrtools/viewmodel/information/Line_Manager_BD_Resolution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="246" column="4" lean-forward="true" selection-start-line="246" selection-start-column="4" selection-end-line="248" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lehrtools/viewmodel/information/Line_Manager_DP60.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="300" column="7" selection-start-line="300" selection-start-column="7" selection-end-line="300" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lehrtools/viewmodel/Observer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="61" selection-start-line="13" selection-start-column="61" selection-end-line="13" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lehrtools/viewmodel/Subject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="7" column="54" selection-start-line="7" selection-start-column="54" selection-end-line="7" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lehrtools/viewmodel/ModelEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="33" column="4" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lehrtools/model/state/ResolutionState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="21" column="42" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lehrtools/model/state/State.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="8" column="79" selection-start-line="8" selection-start-column="79" selection-end-line="8" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lehrtools/formula/parser/InputLanguages.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="45" column="99" selection-start-line="45" selection-start-column="99" selection-end-line="45" selection-end-column="99" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lehrtools/model/state/Step_DP.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-442">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="11" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lehrtools/model/state/Step_Resolution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="26" column="56" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="26" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lehrtools/model/state/State_DP.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="30" column="42" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lehrtools/viewmodel/information/Line_Manager_Resolution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="19" column="35" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lehrtools/viewmodel/information/Line_DP60.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="37" column="84" selection-start-line="37" selection-start-column="84" selection-end-line="37" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lehrtools/model/DP60_Utility.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-493">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lehrtools/model/DP60.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="77">
+          <caret line="245" column="17" selection-start-line="245" selection-start-column="17" selection-end-line="245" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lehrtools/model/state/ModelState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="30" column="57" selection-start-line="30" selection-start-column="57" selection-end-line="30" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lehrtools/viewmodel/information/Line_Factory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1624">
+          <caret line="234" column="43" selection-start-line="234" selection-start-column="43" selection-end-line="234" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lehrtools/view/components/HBox_Factory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="316" column="17" selection-start-line="316" selection-start-column="17" selection-end-line="316" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lehrtools/view/BD_Resolution_View.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lehrtools/view/BD_Resolution_View.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="49" column="9" lean-forward="true" selection-start-line="14" selection-end-line="49" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lehrtools/view/Main_Menu_Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="695">
+          <caret line="374" selection-start-line="374" selection-end-line="374" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/lehrtools.model.Resolution">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>lehrtools.model.Resolution</OriginalElement>
+          <nodes>
+            <node x="0.0" y="142.0">lehrtools.view.components.HBox_Factory</node>
+            <node x="351.0" y="589.0">lehrtools.model.ResolutionUtility</node>
+            <node x="174.0" y="0.0">lehrtools.view.components.Tree_Generator</node>
+            <node x="245.0" y="268.0">lehrtools.viewmodel.ResolutionViewModel</node>
+            <node x="198.0" y="390.0">lehrtools.viewmodel.Observer</node>
+            <node x="270.0" y="499.0">lehrtools.model.Resolution</node>
+            <node x="412.0" y="191.0">lehrtools.viewmodel.information.Line_Manager_Resolution</node>
+            <node x="162.0" y="589.0">lehrtools.model.state.ResolutionLog</node>
+            <node x="185.0" y="146.0">lehrtools.view.ResolutionController</node>
+            <node x="536.0" y="106.0">lehrtools.viewmodel.information.Line_Factory</node>
+            <node x="356.0" y="395.0">lehrtools.viewmodel.Subject</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="lehrtools.model.Resolution" target="lehrtools.model.state.ResolutionLog">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="lehrtools.view.ResolutionController" target="lehrtools.view.components.Tree_Generator">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="lehrtools.viewmodel.ResolutionViewModel" target="lehrtools.viewmodel.Subject">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="lehrtools.viewmodel.ResolutionViewModel" target="lehrtools.viewmodel.information.Line_Manager_Resolution">
+              <point x="12.653176839389317" y="-0.0" />
+              <point x="12.653176839389317" y="0.0" />
+            </edge>
+            <edge source="lehrtools.view.ResolutionController" target="lehrtools.view.components.HBox_Factory">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="lehrtools.model.Resolution" target="lehrtools.viewmodel.Observer">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="lehrtools.model.Resolution" target="lehrtools.viewmodel.Subject">
+              <point x="-4.0369556112894855" y="-2.9500829467115466" />
+              <point x="-4.036955611289489" y="-2.9500829467115466" />
+            </edge>
+            <edge source="lehrtools.model.Resolution" target="lehrtools.model.ResolutionUtility">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="lehrtools.viewmodel.ResolutionViewModel" target="lehrtools.viewmodel.Observer">
+              <point x="-6.093891584742906" y="0.0" />
+              <point x="-6.09389158474292" y="0.0" />
+            </edge>
+            <edge source="lehrtools.viewmodel.information.Line_Manager_Resolution" target="lehrtools.viewmodel.information.Line_Factory">
+              <point x="7.029596354947756" y="0.0" />
+              <point x="7.029596354947728" y="0.0" />
+            </edge>
+            <edge source="lehrtools.viewmodel.Observer" target="lehrtools.viewmodel.Subject">
+              <point x="0.0" y="-8.004327084618822" />
+              <point x="0.0" y="-8.004327084618822" />
+            </edge>
+            <edge source="lehrtools.viewmodel.Subject" target="lehrtools.viewmodel.Observer">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="lehrtools.view.ResolutionController" target="lehrtools.viewmodel.ResolutionViewModel">
+              <point x="-5.636736017591005" y="0.0" />
+              <point x="-5.636736017591019" y="0.0" />
+            </edge>
+          </edges>
+          <settings layout="Organic" zoom="1.1" x="-79.0" y="184.0" />
+          <SelectedNodes>
+            <node>lehrtools.view.ResolutionController</node>
+          </SelectedNodes>
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lehrtools/view/ResolutionController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="264" column="47" selection-start-line="264" selection-start-column="30" selection-end-line="264" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lehrtools/view/BD_Resolution_Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="263" column="33" selection-start-line="263" selection-start-column="33" selection-end-line="263" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lehrtools/miscellanious/Text_Writer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2271">
+          <caret line="141" column="51" selection-start-line="141" selection-start-column="51" selection-end-line="141" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lehrtools/viewmodel/BDResolutionViewModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="16" column="70" selection-start-line="16" selection-start-column="70" selection-end-line="16" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/artifacts/logik_lehrtools_jar/logik_lehrtools/lehrtools/view/DP60_Controller.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1819">
+          <caret line="47" column="49" lean-forward="true" selection-end-line="437" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lehrtools/viewmodel/DP60ViewModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1190">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lehrtools/viewmodel/ResolutionViewModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="19" selection-start-line="19" selection-end-line="22" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lehrtools/view/DP60_Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1683">
+          <caret line="142" column="69" selection-start-line="142" selection-start-column="69" selection-end-line="142" selection-end-column="69" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/lehrtools/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
-          <caret line="33" column="10" selection-start-line="33" selection-start-column="10" selection-end-line="33" selection-end-column="10" />
+          <caret line="33" column="12" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/javafx-src.zip!/javafx/application/Application.java">
+    <entry file="file://$PROJECT_DIR$/output.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logik_lehrtools2.userlibraries">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3587">
-          <caret line="246" column="13" selection-start-line="246" selection-start-column="13" selection-end-line="246" selection-end-column="13" />
+        <state>
+          <caret selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/lehrtools/view/ResolutionController.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/javafx-src.zip!/javafx/application/Application.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6052">
-          <caret line="395" column="21" selection-start-line="395" selection-start-column="21" selection-end-line="395" selection-end-column="21" />
+        <state relative-caret-position="442">
+          <caret line="240" column="9" selection-start-line="240" selection-start-column="9" selection-end-line="240" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/lehrtools/formula/And.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="969">
-          <caret line="73" selection-start-line="73" selection-end-line="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lehrtools/view/BD_Resolution_Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6970">
-          <caret line="451" column="40" selection-start-line="451" selection-start-column="40" selection-end-line="451" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lehrtools/model/BDResolution.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="14" column="87" lean-forward="true" selection-start-line="14" selection-start-column="87" selection-end-line="14" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lehrtools/view/DP60_Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="327" column="59" selection-start-line="327" selection-start-column="59" selection-end-line="327" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor>
+            <show-content>
+              <type id="javaee-facet-resources" />
+              <type id="artifact" />
+              <type id="jpa-descriptors" />
+              <type id="library" />
+            </show-content>
+          </artifact-editor>
+          <last-edited>logik_lehrtools</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>logik_lehrtools</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>logik_lehrtools</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
