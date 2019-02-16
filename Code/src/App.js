@@ -42,6 +42,24 @@ class App extends Component {
         console.log(res.data);
       })
   }
+  handleClick2() {
+    const args = "test2";
+    console.log('Click2 happened');
+    axios.post(`https://jsonplaceholder.typicode.com/users`, { args })
+      .then(res => {
+        console.log(res);
+        console.log(res.data);
+      })
+  }
+  handleClick3() {
+    const args = "test3";
+    console.log('Click3 happened');
+    axios.post(`https://jsonplaceholder.typicode.com/users`, { args })
+      .then(res => {
+        console.log(res);
+        console.log(res.data);
+      })
+  }
 
 
   render() {
@@ -67,8 +85,8 @@ class App extends Component {
               >
               Choose a algorithm to be used on the formula<br></br>
             <button class="button2" onClick={this.handleClick.bind(this)}>Resolution</button>
-                <button class="button2" >BD Resolution</button>
-                <button class="button2" >DP</button>
+                <button class="button2" onClick={this.handleClick2.bind(this)}>BD Resolution</button>
+                <button class="button2"onClick={this.handleClick3.bind(this)}>DP</button>
               </div>
             )
             : (

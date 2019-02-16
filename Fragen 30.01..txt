@@ -1,0 +1,10 @@
+Quellen, Zitate, Referenzen wie?
+Deutsch oder englisch?
+Gliederung soweit ok? Wird sich vermutlich eh nochmal ändern
+
+
+
+
+Java Software sehr schwer zu benutzen --> Alternativen?
+				      --> Verfahren?
+Server schon verfügbar? Hat er noch andere Aufgaben oder kann ich ihn komplett ummodeln?
