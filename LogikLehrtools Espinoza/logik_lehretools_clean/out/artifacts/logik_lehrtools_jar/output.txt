@@ -1,0 +1,21 @@
+Normalform  , Res(F)_0
+{ 1) {0,1} }
+
+Resolution über 0 , Alle nicht-tautologischen Resolventen von Res(F)_0 über die Variable 0
+{  }
+Berrechnungen
+Keine Berrechnungen wurden vorgenommen.
+
+Resolution über 1 , Alle nicht-tautologischen Resolventen von Res(F)_0 über die Variable 1
+{  }
+Berrechnungen
+Keine Berrechnungen wurden vorgenommen.
+
+Resolution , Alle nicht-tautologischen Resolventen von Res(F)_0
+{  }
+Berrechnungen
+Keine Berrechnungen wurden vorgenommen.
+
+Ende
+Die Formel ist erfüllbar.
+

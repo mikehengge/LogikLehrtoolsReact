@@ -16,6 +16,8 @@ class App extends Component {
     this.closeMenu = this.closeMenu.bind(this);
   }
 
+
+
   showMenu(event) {
     event.preventDefault();
 
@@ -34,13 +36,14 @@ class App extends Component {
     }
   }
   handleClick() {
-    const args = "test";
+    const fakeData = [ { formula: 'x1 + x2 * x3' } ];
+    const url = 'http://192.168.133.129:80';
+    axios.get(url, {
+      topic: 'test',
+      logs: fakeData, // look ma, no JSON.stringify()!
+      crossdomain: true,
+    });
     console.log('Click happened');
-    axios.post(`https://jsonplaceholder.typicode.com/users`, { args })
-      .then(res => {
-        console.log(res);
-        console.log(res.data);
-      })
   }
   handleClick2() {
     const args = "test2";
@@ -66,27 +69,27 @@ class App extends Component {
     return (
 
         <header className={"dark"}>
-      <div class="introduction">Welcome to Logik Lehrtools. This tool applies Resolution, BD Resolution or the DP algorithm on a logical formula and displays the solution with all steps.</div>
+      <div className="introduction">Welcome to Logik Lehrtools. This tool applies Resolution, BD Resolution or the DP algorithm on a logical formula and displays the solution with all steps.</div>
       <div className="App">
-          <label for="formulaInput">Please enter your formula</label>
+          <label htmlFor="formulaInput">Please enter your formula</label>
           <div className="input">
-            <input type="text" id="formulaInput" autoFocus="true" name="username"  placeholder="Example: (var1 AND var2) OR var3">
+            <input type="text" id="formulaInput" autoFocus={true} name="username"  placeholder="Example: (var1 AND var2) OR var3">
             </input>
-            <button class="button" onClick={this.showMenu}>Go</button>
+            <button className="button" onClick={this.showMenu}>Go</button>
           </div>
           {
           this.state.showMenu
             ? (
               <div
-                class="menu"
+                className="menu"
                 ref={(element) => {
                   this.dropdownMenu = element;
                 }}
               >
               Choose a algorithm to be used on the formula<br></br>
-            <button class="button2" onClick={this.handleClick.bind(this)}>Resolution</button>
-                <button class="button2" onClick={this.handleClick2.bind(this)}>BD Resolution</button>
-                <button class="button2"onClick={this.handleClick3.bind(this)}>DP</button>
+            <button className="button2" onClick={this.handleClick.bind(this)}>Resolution</button>
+                <button className="button2" onClick={this.handleClick2.bind(this)}>BD Resolution</button>
+                <button className="button2"onClick={this.handleClick3.bind(this)}>DP</button>
               </div>
             )
             : (

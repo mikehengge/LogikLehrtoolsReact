@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eclipse-userlibraries>
+  <library name="JavaFXApp">
+    <archive path="D:/Downloads/Espinoza_IntelliJ(1)/IntelliJ/IdeaProjects/logik_lehrtools/out/artifacts/JavaFXApp/JavaFXApp.jar" />
+  </library>
+  <library name="lib">
+    <archive path="D:/Downloads/Espinoza_IntelliJ(1)/IntelliJ/IdeaProjects/logik_lehrtools/lib/opentest4j-1.0.0.jar" />
+    <archive path="D:/Downloads/Espinoza_IntelliJ(1)/IntelliJ/IdeaProjects/logik_lehrtools/lib/junit-platform-commons-1.0.0.jar" />
+    <archive path="D:/Downloads/Espinoza_IntelliJ(1)/IntelliJ/IdeaProjects/logik_lehrtools/lib/junit-jupiter-api-5.0.0.jar" />
+    <archive path="D:/Downloads/Espinoza_IntelliJ(1)/IntelliJ/IdeaProjects/logik_lehrtools/lib/apiguardian-api-1.0.0.jar" />
+  </library>
+  <library name="logik_lehrtools">
+    <archive path="D:/Downloads/Espinoza_IntelliJ(1)/IntelliJ/IdeaProjects/logik_lehrtools/out/artifacts/logik_lehrtools/logik_lehrtools.jar" />
+  </library>
+</eclipse-userlibraries>
+
