@@ -9,59 +9,79 @@ class App extends Component {
     super();
 
     this.state = {
-      showMenu: false,
+      value: '',
+      heuristik: '',
+      showMenu: true,
+      data: null,
+      result: null,
     };
-
-    this.showMenu = this.showMenu.bind(this);
-    this.closeMenu = this.closeMenu.bind(this);
+    this.resultRef = React.createRef()
+    this.stepsRef = React.createRef()
+    this.handleChange = this.handleChange.bind(this);
+    this.handleChange2 = this.handleChange2.bind(this);
+    this.setResult = this.setResult.bind(this);
   }
 
+  scrollToSteps = (event) => window.scrollTo(0, this.stepsRef.current.offsetTop)
 
 
-  showMenu(event) {
-    event.preventDefault();
-
-    this.setState({ showMenu: true }, () => {
-      document.addEventListener('click', this.closeMenu);
-    });
+  handleChange(event) {
+    this.setState({value: event.target.value});
   }
 
-  closeMenu(event) {
+  handleChange2(event) {
+    this.setState({heuristik: event.target.value});
+  }
 
-    if (!this.dropdownMenu.contains(event.target)) {
-
-      this.setState({ showMenu: false }, () => {
-        document.removeEventListener('click', this.closeMenu);
-      });
+  setResult  = (response) => {
+    var unsatisfiable = 'unsatisfiable';
+    if (response.match(unsatisfiable)) {
+      this.setState({result: <div className="results" ref={this.resultRef}><h2>Result: Given formula is unsatisfiable.</h2><p><button className="button2" onClick={this.scrollToSteps}>Jump to steps</button></p></div>})
     }
+    else this.setState({result: <div className="results" ref={this.resultRef}><h2>Result: Given formula is satisfiable.</h2><p><button className="button2" onClick={this.scrollToSteps}>Jump to steps</button></p></div>})
+
   }
-  handleClick() {
-    const fakeData = [ { formula: 'x1 + x2 * x3' } ];
-    const url = 'http://192.168.133.129:80';
+
+  handleRes() {
+    const url = 'http://192.168.133.129:6253';
     axios.get(url, {
-      topic: 'test',
-      logs: fakeData, // look ma, no JSON.stringify()!
-      crossdomain: true,
-    });
+      params: {
+        'Content-Type': 'application/json',
+        type: 'Resolution',
+        formula: this.state.value,
+        heuristik: this.state.heuristik,
+        }
+      })
+      .then(function (response) {
+        console.log("Response " + response.data);
+        this.setState({data : response.data},
+                    this.setResult(response.data),
+                    window.scrollTo(0, this.resultRef.current.offsetTop));
+      }.bind(this))
+      .catch(function (error) {
+        console.log(error);
+      });
+    console.log("Data: " + this.state.data);
+  }
+  handleBD() {
+    const url = 'http://192.168.133.129:6253';
+    axios.get(url, {
+      params: {
+        type: 'BD Resolution',
+        formula: this.state.value,
+        crossdomain: true,
+    }});
     console.log('Click happened');
   }
-  handleClick2() {
-    const args = "test2";
-    console.log('Click2 happened');
-    axios.post(`https://jsonplaceholder.typicode.com/users`, { args })
-      .then(res => {
-        console.log(res);
-        console.log(res.data);
-      })
-  }
-  handleClick3() {
-    const args = "test3";
-    console.log('Click3 happened');
-    axios.post(`https://jsonplaceholder.typicode.com/users`, { args })
-      .then(res => {
-        console.log(res);
-        console.log(res.data);
-      })
+  handleDP() {
+    const url = 'http://192.168.133.129:6253';
+    axios.get(url, {
+      params: {
+        type: 'DP',
+        formula: this.state.value,
+        crossdomain: true,
+    }});
+    console.log('Click happened');
   }
 
 
@@ -69,33 +89,25 @@ class App extends Component {
     return (
 
         <header className={"dark"}>
-      <div className="introduction">Welcome to Logik Lehrtools. This tool applies Resolution, BD Resolution or the DP algorithm on a logical formula and displays the solution with all steps.</div>
+      <div className="introduction">Welcome to Logik Lehrtools. This tool applies Resolution, BD Resolution or the DP algorithm on a logical formula and displays the result with all steps.</div>
       <div className="App">
-          <label htmlFor="formulaInput">Please enter your formula</label>
-          <div className="input">
-            <input type="text" id="formulaInput" autoFocus={true} name="username"  placeholder="Example: (var1 AND var2) OR var3">
+          <label>Please enter your formula</label>
+          <div className="inputFormula">
+            <input type="text" id="formulaInput" autoFocus={true} value={this.state.value} onChange={this.handleChange}  placeholder="Example: (var1 AND var2) OR var3">
             </input>
-            <button className="button" onClick={this.showMenu}>Go</button>
           </div>
-          {
-          this.state.showMenu
-            ? (
-              <div
-                className="menu"
-                ref={(element) => {
-                  this.dropdownMenu = element;
-                }}
-              >
-              Choose a algorithm to be used on the formula<br></br>
-            <button className="button2" onClick={this.handleClick.bind(this)}>Resolution</button>
-                <button className="button2" onClick={this.handleClick2.bind(this)}>BD Resolution</button>
-                <button className="button2"onClick={this.handleClick3.bind(this)}>DP</button>
-              </div>
-            )
-            : (
-              null
-            )
-        }
+          <label>Please enter a heuristik (optional)</label>
+          <div className="inputHeuristik">
+            <input type="text2" id="heuristikInput" autoFocus={false} value={this.state.heuristik} onChange={this.handleChange2}  placeholder="Example: var1,var2,var3">
+            </input>
+          </div>
+          <div className="menu">Choose an algorithm to be used on the formula<br></br>
+            <button className="button2" onClick={this.handleRes.bind(this)}>Resolution</button>
+            <button className="button2" onClick={this.handleBD.bind(this)}>BD Resolution</button>
+            <button className="button2"onClick={this.handleDP.bind(this)}>DP</button>
+          </div>
+          <div>{this.state.result}</div>
+          <div className="receivedResults" ref={this.stepsRef} dangerouslySetInnerHTML={{ __html: this.state.data}}></div>
       </div>
     </header>
     );

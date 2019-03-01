@@ -3,6 +3,7 @@ package lehrtools;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.LinkedList;
+import java.awt.event.*;
 
 import javax.xml.parsers.ParserConfigurationException;
 
@@ -16,15 +17,12 @@ import lehrtools.formula.parser.Input_Language;
 import lehrtools.formula.parser.XML_Reader;
 import lehrtools.model.Resolution;
 
+public class Main {
 
-
-public class Main extends Application {
-	
-	
-	@Override
-	public void start(Stage primaryStage) {
+//	@Override
+//	public void start(Stage primaryStage) {
 //		try {
-			//BorderPane root = new BorderPane();
+//			BorderPane root = new BorderPane();
 //			Parent root = FXMLLoader.load(getClass().getResource("/lehrtools/view/Main_Menu.fxml"));
 //			Scene scene = new Scene(root,1024,768);
 //			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
@@ -36,27 +34,45 @@ public class Main extends Application {
 //		} catch(Exception e) {
 //			e.printStackTrace();
 //		}
-	}
-	
+//	}
+
 	public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException {
-		//launch(args);
+		// launch(args);
 		XML_Reader reader;
 		reader = new XML_Reader("InputLanguages.xml");
 		LinkedList<Input_Language> _languages;
 		_languages = reader.get_languages();
 		Input_Language language = _languages.get(0);
-		ArrayList<Variable> heuristik= new ArrayList<Variable>();
-		heuristik.add(new Variable("x1"));
-		heuristik.add(new Variable("x2"));
-		heuristik.add(new Variable("x3"));
+		
+		Resolution resolution;
+		ArrayList<Variable> heuristik = new ArrayList<Variable>();
+		
+		if (args.length == 2) {
+			String[] heuristiks = args[1].split(",");
+			for (String variable : heuristiks) {
+				heuristik.add(new Variable(variable));
+			}
+			resolution = new Resolution(lehrtools.view.Main_Menu_Controller.get_Formula(args[0], "Resolution", language), heuristik);
 
-//		System.out.println(_languages.get(0).name);
-		System.out.println(lehrtools.view.Main_Menu_Controller.get_Formula(args[0], "Resolution", language));		
-		Resolution test = new Resolution(lehrtools.view.Main_Menu_Controller.get_Formula("(-x1 + x2) * (-x1 + -x2) * (-x1 + -x3)", "Resolution",language), heuristik);
+		}
+		else {
+			resolution = new Resolution(lehrtools.view.Main_Menu_Controller.get_Formula(args[0], "Resolution", language));
+
+		}
+		
+//		
+		
+//		heuristik.add(new Variable("x1"));
+//		heuristik.add(new Variable("x2"));
+//		heuristik.add(new Variable("x3"));
+
+		if (resolution.proof() == 1)
+			System.out.println("End: Result: Formula is satisfiable");
+		else
+			System.out.println("End: Result: Formula is unsatisfiable");
 		System.exit(0);
 	}
-	
-	
+
 //	
 //	private void buttonEventHandler(Event event)
 //	{

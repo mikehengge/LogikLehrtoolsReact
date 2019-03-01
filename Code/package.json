@@ -3,19 +3,18 @@
   "version": "1.0.0",
   "description": "Hello there",
   "main": "index.js",
-  "homepage": "http:192.168.133.129",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "author": "Mike Hengge",
+  "author": "CodeMix",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.18.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "react-scripts": "^1.1.1"
+    "react-scripts": "^1.1.5"
   }
 }

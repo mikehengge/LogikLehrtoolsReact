@@ -86,6 +86,9 @@ public class Resolution extends Subject {
 	 * set the state of the algorithm back to a previous one.
 	 */
 	private LinkedList<ResolutionLog> _logger;
+	
+	private ArrayList<Variable> _heuristik;
+	private boolean _subsumption_done = false;
 
 	/**
 	 * Initializes all variables needed for the calculation. It takes a formula that
@@ -111,6 +114,11 @@ public class Resolution extends Subject {
 		_index = 0;
 		_logger = new LinkedList<>();
 		generate_log();
+		
+		ArrayList<Variable> heuristik = new ArrayList<Variable>();
+		heuristik.addAll(_formula_vars);
+		Resolution noHeuristik = new Resolution(_formula, heuristik);
+		_proof = noHeuristik._proof;
 	}
 
 	/**
@@ -136,10 +144,11 @@ public class Resolution extends Subject {
 		_bw = false;
 		_index = 0;
 		_logger = new LinkedList<>();
+		
+		_heuristik = heuristik;
 		generate_log();
-		ArrayList<Variable> test = (ArrayList<Variable>) heuristik.clone();
+		ArrayList<Variable> test = (ArrayList<Variable>) _heuristik.clone();
 		execute_resolution(test);
-//		System.out.println(_logger.get(0).formula.toString());
 	}
 
 	/**
@@ -296,27 +305,29 @@ public class Resolution extends Subject {
 				_proof = 0;
 				_steps.add(new Step_End(_state, _index, _proof, _resolventen.get_empty_clause()));
 				update();
+				System.out.println(_index + ": End Resolution: empty clause in resolvents");
 			}
 			if (_resolventen.is_empty()) {
 				_state = ModelState.END;
 				_proof = 1;
 				_steps.add(new Step_End(_state, _index, _proof, null));
 				update();
-
+				System.out.println(_index + ": End Resolution: formula has no resolvents");
 			}
-			System.out.println("Formula: " + _resolventen);
+			System.out.println(_index + ": Non-tautological resolvents: " + _resolventen);
 
 			generate_log();
 		} else {
+			System.out.println(_index + ":Formula clauses as NNF: " + _formula);
 			for (Variable variable : heuristik) {
 				_resolventen_temp = _resolventen_temp
 						.union_with(ResolutionUtility.resolution_over(_formula, _resolventen, variable, res_steps));
-				System.out.println("Resolventen mit Variable "+variable+": " +ResolutionUtility.resolution_over(_formula, _resolventen, variable, res_steps));
-				System.out.println("Resolventen gesamt: " +_resolventen_temp);
+				System.out.println(_index + ":Resolvents with variable "+variable+": " +ResolutionUtility.resolution_over(_formula, _resolventen, variable, res_steps));
 				if (_index != 0)
 					_resolventen_temp = _resolventen_temp.union_with(
 							ResolutionUtility.resolution_over(_resolventen, _resolventen, variable, res_steps));
 			}
+			System.out.println(_index + ": Non-tautological resolvents: " + _resolventen_temp);
 
 
 			_steps.add(new Step_Resolution(ModelState.RESOLUTION, _index, res_steps, _resolventen_temp, _formula));
@@ -335,80 +346,21 @@ public class Resolution extends Subject {
 				_proof = 0;
 				_steps.add(new Step_End(_state, _index, _proof, _resolventen.get_empty_clause()));
 				update();
+				System.out.println(_index + ": End Resolution: empty clause in resolvents");
 			}
 			if (_resolventen.is_empty()) {
 				_state = ModelState.END;
 				_proof = 1;
 				_steps.add(new Step_End(_state, _index, _proof, null));
 				update();
+				System.out.println(_index + ": End Resolution: formula has no resolvents");
 
 			}
-			System.out.println("Endergebnis: " + _resolventen);
-
 			//generate_log();
 
 		}
+		if(!_resolventen.is_empty()) execute_forward_subsumption();
 
-	}
-
-	/**
-	 * Calculates all possible resolvents of the clauses in the formula that contain
-	 * a certain variable passed as a parameter. The resolution rule is applied only
-	 * to clauses containing clashing literals of the specified variable. If the
-	 * variable is not contained in the formula or the state is inconsistent then
-	 * nothing will be done. If an empty clause is found amongst the resolvents then
-	 * the calculations are ended by setting the state to END and the flag for
-	 * satisfiability will be set to 1 , signaling the formula is satisfiable. An
-	 * update event to the observer will be sent after each state change.
-	 *
-	 * @param variable : variable to resolve over.
-	 */
-	private void execute_resolution_over(Variable variable) {
-		System.out.println("Resolution über " + variable);
-		if (_state != ModelState.RESOLUTION /* && _state != ModelState.RESOLUTION_OVER */)
-			return;
-		LinkedList<S_Calculation> res_steps = new LinkedList<>();
-		Formula_NF resolvents_over_var = ResolutionUtility.resolution_over(_formula, _resolventen, variable, res_steps);
-		System.out.println(resolvents_over_var);
-		if (_formula_vars.contains(variable))
-			_formula_vars.remove(variable);
-		else
-			return;
-
-		if (_index != 0)
-			resolvents_over_var = resolvents_over_var
-					.union_with(ResolutionUtility.resolution_over(_resolventen, _resolventen, variable, res_steps));
-		_resolventen_temp = _resolventen_temp.union_with(resolvents_over_var);
-		// _state = ModelState.RESOLUTION_OVER;
-		_steps.add(new Step_Resolution_Over(ModelState.RESOLUTION_OVER, _index, res_steps, resolvents_over_var,
-				_formula, variable, _formula_vars));
-		update();
-		if (_resolventen_temp.contains_empty_clause()) {
-			_state = ModelState.END;
-			_proof = 0;
-			_steps.add(new Step_End(_state, _index, _proof, _resolventen_temp.get_empty_clause()));
-			update();
-
-		} else if (_formula_vars.isEmpty()) {
-			_formula = _formula.union_with(_resolventen);
-			_formula.remove_duplicate_clauses();
-			_resolventen = _resolventen_temp;
-			_resolventen.remove_duplicate_clauses();
-			_subsumed_resolvents = _resolventen;
-			_resolventen_temp = new Formula_NF();
-
-			_steps.add(new Step_Resolution(ModelState.RESOLUTION, _index, new LinkedList<>(), _resolventen, _formula));
-			_state = ModelState.SUBSUMPTION;
-			update();
-			if (_resolventen.is_empty()) {
-				_state = ModelState.END;
-				_proof = 1;
-				_steps.add(new Step_End(_state, _index, _proof, null));
-				update();
-
-			}
-		}
-		generate_log();
 	}
 
 	/**
@@ -420,6 +372,7 @@ public class Resolution extends Subject {
 	 */
 	@SuppressWarnings("Duplicates")
 	private void execute_forward_subsumption() {
+		_subsumption_done = true;
 		if (_fw || _state != ModelState.SUBSUMPTION)
 			return;
 		LinkedList<S_Calculation> sub_steps = new LinkedList<>();
@@ -434,19 +387,22 @@ public class Resolution extends Subject {
 			_proof = 1;
 			_steps.add(new Step_End(_state, _index, _proof, null));
 			update();
+			System.out.println(_index + ": End Resolution: formula has no resolvents");
 			return;
-		} else if (_bw) {
-			_formula = _subsumed_formula;
-			_formula_vars = _formula.vars();
-			_formula_vars.addAll(_subsumed_resolvents.vars());
-			_state = ModelState.RESOLUTION;
-			_index++;
-			_steps.add(new Step_Start(ModelState.START, _index, _formula.union_with(_resolventen)));
-			_fw = false;
-			_bw = false;
-			update();
+//		} else if (_bw) {
+//			_formula = _subsumed_formula;
+//			_formula_vars = _formula.vars();
+//			_formula_vars.addAll(_subsumed_resolvents.vars());
+//			_state = ModelState.RESOLUTION;
+//			_index++;
+//			_steps.add(new Step_Start(ModelState.START, _index, _formula.union_with(_resolventen)));
+//			_fw = false;
+//			_bw = false;
+//			update();
 		}
 		generate_log();
+		System.out.println(_index + ":Forward Subsumption -Deletion of subsumed clauses: " + _resolventen);
+		if (!_resolventen.is_empty()) execute_backward_subsumption();
 	}
 
 	/**
@@ -466,6 +422,7 @@ public class Resolution extends Subject {
 		_formula = _subsumed_formula;
 		_bw = true;
 		update();
+		System.out.println(_index + ":Backward Subsumption - Deletion of subsumed clauses: " + _resolventen);
 		if (_fw) {
 			_formula_vars = _formula.vars();
 			_formula_vars.addAll(_subsumed_resolvents.vars());
@@ -478,6 +435,11 @@ public class Resolution extends Subject {
 			update();
 		}
 		generate_log();
+
+		if (!_resolventen.is_empty()) execute_resolution(_heuristik);
+		else {
+			System.out.println(_index + ": End Resolution: formula has no resolvents");
+		}
 	}
 
 	/**

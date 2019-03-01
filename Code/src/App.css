@@ -45,7 +45,7 @@ body {
 }
 
 .introduction {
-  color:white;
+  color:black;
   text-align: center;
   display: inline-block;
   width:60vw;
@@ -55,21 +55,24 @@ body {
 }
 
 input[type=text], select {
-  width: 50vw;
+  width: 50em;
   padding: 20px 14px;
-  margin: 30px -80px;
-  margin-left: 90px;
   display: inline-block;
   border: 1px solid #ccc;
   border-radius: 5px;
   box-sizing: border-box;
   padding-right: 80px;
+  margin-bottom: 10px;
 }
-
-input[type="submit"] {
-    margin-left: 80px;
-    height: 20px;
-    width: 50px;
+input[type=text2], select {
+  width: 35em;
+  padding: 18px 12px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding-right: 80px;
+  margin-bottom: 10px;
 }
 
 .menu {
@@ -77,10 +80,27 @@ input[type="submit"] {
   border-radius: 0px;
   box-sizing: border-box;
   padding-right: 0px;
+  margin-bottom: 2em;
+}
+
+table {
+  width: 90%;
+  margin-left: 7%;
+  margin-right: 7%;
+}
+td {
+  border-top: 1px solid black;
+  border-collapse: collapse;
+  padding-top: 2em;
+  padding-bottom: 2em;
 }
 
 ol, ul {
   padding-left: 30px;
+}
+
+.results {
+  margin-bottom: 5em;
 }
 
 .status {
