@@ -85,6 +85,7 @@ input[type=text2], select {
 
 table {
   width: 90%;
+  margin-top: -80px;
   margin-left: 7%;
   margin-right: 7%;
 }

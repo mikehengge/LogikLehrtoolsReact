@@ -56,6 +56,7 @@ class Lehrtools extends Component {
 
   //Used when button 'Resolution' is pressed
   handleRes() {
+    this.setState({steps: null});
     const url = 'http://192.168.133.129:6253'; //URL of Server, Port where API is waiting
     axios.get(url, { //using axios to send GET-Request
       params: { //Send given input in parameters
@@ -76,6 +77,7 @@ class Lehrtools extends Component {
   }
   //Used when button 'BD Resolution' is pressed, but no results are received (not implemented yet)
   handleBD() {
+    this.setState({steps: null});
     const url = 'http://192.168.133.129:6253';
     axios.get(url, {
       params: {
@@ -88,6 +90,7 @@ class Lehrtools extends Component {
   }
   //Used when button 'DP' is pressed, but no results are received (not implemented yet)
   handleDP() {
+    this.setState({steps: null});
     const url = 'http://192.168.133.129:6253';
     axios.get(url, {
       params: {
@@ -107,9 +110,10 @@ class Lehrtools extends Component {
       <div className="introduction">Welcome to Logik Lehrtools. This tool applies Resolution, BD Resolution or the DP algorithm on a logical formula and displays the result with all steps.</div>
       <div className="App">
           <label>Please enter your formula</label>
+          <p>Use '+' for OR, '*' for AND, '-' for NOT</p>
           <div className="inputFormula">
       		{/*Input field for the formula, will be auto focused, displays the value of 'formula' and uses function handleFormula when something is written*/}
-            <input type="text" id="formulaInput" autoFocus={true} value={this.state.formula} onChange={this.handleFormula}  placeholder="+ for OR, * for AND, - for NOT     EXAMPLE: (x1+x2)*-x3">
+            <input type="text" id="formulaInput" autoFocus={true} value={this.state.formula} onChange={this.handleFormula}  placeholder="EXAMPLE: (x1+x2)*-x3">
             </input>
           </div>
           <label>Please enter a heuristik (optional)</label>
