@@ -24,9 +24,9 @@ class RequestHandler(BaseHTTPRequestHandler):
         if (optional != ''):
             heuristik = urlparse.parse_qs(data.query)['heuristik'] #extracting heuristik from path if heuristik is given
             heuristik = str(heuristik)[1:-1] 
-            command="java -jar Main.jar " + formula +" "+ heuristik #start java app with heuristik
+            command="java -jar lehrtoolsJava.jar " + formula +" "+ heuristik #start java app with heuristik
         else:
-            command="java -jar Main.jar " + formula #start java app without heuristik
+            command="java -jar lehrtoolsJava.jar " + formula #start java app without heuristik
         p = Popen(command, stdout=PIPE, stderr=STDOUT, shell=True) #run java app with command
         self.send_response(200) 
         self.send_header("Content-type", "text/plain") #response is of type text\plain

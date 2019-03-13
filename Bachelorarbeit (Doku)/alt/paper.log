@@ -1,7 +1,8 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6730 64-bit) (preloaded format=pdflatex 2018.10.23)  13 MAR 2019 09:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6730 64-bit) (preloaded format=pdflatex 2018.10.23)  13 MAR 2019 14:09
 entering extended mode
-**"D:/GitHub/LogikLehrtoolsReact/Bachelorarbeit (Doku)/alt/paper.tex"
-("D:/GitHub/LogikLehrtoolsReact/Bachelorarbeit (Doku)/alt/paper.tex"
+**"D:/GitHub/LogikLehrtoolsReact/Bachelorarbeit (Doku)/Bachelorarbeit/paper.tex
+"
+("D:/GitHub/LogikLehrtoolsReact/Bachelorarbeit (Doku)/Bachelorarbeit/paper.tex"
 LaTeX2e <2018-04-01> patch level 5
 (D:\MikTex\tex\latex\base\report.cls
 Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
@@ -701,34 +702,44 @@ Underfull \hbox (badness 10000) in paragraph at lines 62--68
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [24 <../Abbildungen/handleChange.png> <../Abbildungen/axiosResolution.png>] [2
-5 <../Abbildungen/steps.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 73--74
+ [24 <../Abbildungen/handleChange.png> <../Abbildungen/axiosResolution.png>]
+Underfull \hbox (badness 1087) in paragraph at lines 69--70
+\OT1/cmr/m/n/12 Um das Er-geb-nis auch kom-pakt dar-zu-stel-len, un-ter-sucht R
+e-act mit-tels
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 69--70
+
+ []
+
+[25 <../Abbildungen/steps.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 72--73
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 75--76
+Underfull \hbox (badness 10000) in paragraph at lines 74--75
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 77--78
+Underfull \hbox (badness 10000) in paragraph at lines 76--77
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 79--85
+Underfull \hbox (badness 10000) in paragraph at lines 78--84
 
  []
 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 86--139
+Underfull \hbox (badness 10000) in paragraph at lines 85--139
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 86--139
+Underfull \hbox (badness 10000) in paragraph at lines 85--139
 
  []
 
@@ -795,19 +806,19 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 268.
  ) 
 Here is how much of TeX's memory you used:
  6722 strings out of 492973
- 102724 string characters out of 3143879
+ 102889 string characters out of 3143879
  201185 words of memory out of 3000000
  10407 multiletter control sequences out of 15000+200000
  10725 words of font info for 39 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 36i,7n,42p,1270b,425s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 36i,7n,42p,1281b,425s stack positions out of 5000i,500n,10000p,200000b,50000s
 <D:/MikTex/fonts/type1/public/amsfonts/cm/cmbx10.pfb><D:/MikTex/fonts/type1/p
 ublic/amsfonts/cm/cmbx12.pfb><D:/MikTex/fonts/type1/public/amsfonts/cm/cmcsc10.
 pfb><D:/MikTex/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/MikTex/fonts/type1/
 public/amsfonts/cm/cmr12.pfb><D:/MikTex/fonts/type1/public/amsfonts/cm/cmr17.pf
 b><D:/MikTex/fonts/type1/public/amsfonts/cm/cmsl12.pfb><D:/MikTex/fonts/type1/p
 ublic/amsfonts/cm/cmti12.pfb>
-Output written on paper.pdf (35 pages, 896073 bytes).
+Output written on paper.pdf (35 pages, 895833 bytes).
 PDF statistics:
  603 PDF objects out of 1000 (max. 8388607)
  100 named destinations out of 1000 (max. 500000)
