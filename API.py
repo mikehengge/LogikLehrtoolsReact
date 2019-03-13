@@ -34,13 +34,16 @@ class RequestHandler(BaseHTTPRequestHandler):
         self.send_response2(200)
         self.send_header("Content-type", "text/plain")
         self.end_headers()
-        self.wfile.write('<table><tr><td>Iteration</td><td>Step</td><td>Resulting formula</td></tr>')
-        self.wfile.write('<tr><td>0</td><td>Unprocessed formula</td><td>' + formula + '</td></tr>')
-        for line in p.stdout:
-            line.rstrip("\n")
-            iteration, step, formula = line.split(":");
-            self.wfile.write('<tr><td> ' + iteration +'</td><td>'+step+'</td><td>'+formula+'</td></tr>')
-        self.wfile.write('</table>')
+        try :
+            self.wfile.write('<table><tr><td>Iteration</td><td>Step</td><td>Resulting formula</td></tr>')
+            self.wfile.write('<tr><td>0</td><td>Unprocessed formula</td><td>' + formula + '</td></tr>')
+            for line in p.stdout:
+                line.rstrip("\n")
+                iteration, step, formula = line.split(":");
+                self.wfile.write('<tr><td> ' + iteration +'</td><td>'+step+'</td><td>'+formula+'</td></tr>')
+            self.wfile.write('</table>')
+        except Exception as e:
+            self.wfile.write('invalid')
     def do_POST(self):
 
         request_path = self.path

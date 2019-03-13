@@ -34,11 +34,17 @@ class App extends Component {
   }
 
   setResult  = (response) => {
+    var invalid = 'invalid'
     var unsatisfiable = 'unsatisfiable';
-    if (response.match(unsatisfiable)) {
-      this.setState({result: <div className="results" ref={this.resultRef}><h2>Result: Given formula is unsatisfiable.</h2><p><button className="button2" onClick={this.scrollToSteps}>Jump to steps</button></p></div>})
+    if (response.match(invalid)) { this.setState({result: <div className="results" ref={this.resultRef}><h2>Given formula is not valid</h2></div>})}
+    else if (response.match(unsatisfiable)) {
+      this.setState({result: <div><div className="results" ref={this.resultRef}><h2>Result: Given formula is unsatisfiable.</h2><p><button className="button2" onClick={this.scrollToSteps}>Jump to steps</button></p></div>
+                                                                          <div className="receivedResults" ref={this.stepsRef} dangerouslySetInnerHTML={{ __html: this.state.data}}></div></div>
+                                                                        })
     }
-    else this.setState({result: <div className="results" ref={this.resultRef}><h2>Result: Given formula is satisfiable.</h2><p><button className="button2" onClick={this.scrollToSteps}>Jump to steps</button></p></div>})
+    else this.setState({result: <div><div className="results" ref={this.resultRef}><h2>Result: Given formula is satisfiable.</h2><p><button className="button2" onClick={this.scrollToSteps}>Jump to steps</button></p></div>
+                                                                            <div className="receivedResults" ref={this.stepsRef} dangerouslySetInnerHTML={{ __html: this.state.data}}></div></div>
+})
 
   }
 
@@ -107,7 +113,6 @@ class App extends Component {
             <button className="button2"onClick={this.handleDP.bind(this)}>DP</button>
           </div>
           <div>{this.state.result}</div>
-          <div className="receivedResults" ref={this.stepsRef} dangerouslySetInnerHTML={{ __html: this.state.data}}></div>
       </div>
     </header>
     );

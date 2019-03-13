@@ -305,16 +305,16 @@ public class Resolution extends Subject {
 				_proof = 0;
 				_steps.add(new Step_End(_state, _index, _proof, _resolventen.get_empty_clause()));
 				update();
-				System.out.println(_index + ": End Resolution: empty clause in resolvents");
+				System.out.println(_index + ":End Resolution: empty clause in resolvents");
 			}
 			if (_resolventen.is_empty()) {
 				_state = ModelState.END;
 				_proof = 1;
 				_steps.add(new Step_End(_state, _index, _proof, null));
 				update();
-				System.out.println(_index + ": End Resolution: formula has no resolvents");
+				System.out.println(_index + ":End Resolution: formula has no resolvents");
 			}
-			System.out.println(_index + ": Non-tautological resolvents: " + _resolventen);
+			System.out.println(_index + ":Non-tautological resolvents: " + _resolventen);
 
 			generate_log();
 		} else {
@@ -327,7 +327,7 @@ public class Resolution extends Subject {
 					_resolventen_temp = _resolventen_temp.union_with(
 							ResolutionUtility.resolution_over(_resolventen, _resolventen, variable, res_steps));
 			}
-			System.out.println(_index + ": Non-tautological resolvents: " + _resolventen_temp);
+			System.out.println(_index + ":Non-tautological resolvents: " + _resolventen_temp);
 
 
 			_steps.add(new Step_Resolution(ModelState.RESOLUTION, _index, res_steps, _resolventen_temp, _formula));
@@ -346,14 +346,14 @@ public class Resolution extends Subject {
 				_proof = 0;
 				_steps.add(new Step_End(_state, _index, _proof, _resolventen.get_empty_clause()));
 				update();
-				System.out.println(_index + ": End Resolution: empty clause in resolvents");
+				System.out.println(_index + ":End Resolution: empty clause in resolvents");
 			}
 			if (_resolventen.is_empty()) {
 				_state = ModelState.END;
 				_proof = 1;
 				_steps.add(new Step_End(_state, _index, _proof, null));
 				update();
-				System.out.println(_index + ": End Resolution: formula has no resolvents");
+				System.out.println(_index + ":End Resolution: formula has no resolvents");
 
 			}
 			//generate_log();
@@ -381,13 +381,14 @@ public class Resolution extends Subject {
 		_steps.add(new Step_Subsumption(ModelState.SUBSUMPTION_FW, _index, sub_steps, _formula, _resolventen,
 				_subsumed_resolvents));
 		_resolventen = _subsumed_resolvents;
+		System.out.println(_index + ":Forward Subsumption - resolvents after deletion of subsumed clauses: " + _resolventen);
 		update();
 		if (_subsumed_resolvents.is_empty()) {
 			_state = ModelState.END;
 			_proof = 1;
 			_steps.add(new Step_End(_state, _index, _proof, null));
 			update();
-			System.out.println(_index + ": End Resolution: formula has no resolvents");
+			System.out.println(_index + ":End Resolution: formula has no resolvents");
 			return;
 //		} else if (_bw) {
 //			_formula = _subsumed_formula;
@@ -401,7 +402,6 @@ public class Resolution extends Subject {
 //			update();
 		}
 		generate_log();
-		System.out.println(_index + ":Forward Subsumption -Deletion of subsumed clauses: " + _resolventen);
 		if (!_resolventen.is_empty()) execute_backward_subsumption();
 	}
 
@@ -422,7 +422,7 @@ public class Resolution extends Subject {
 		_formula = _subsumed_formula;
 		_bw = true;
 		update();
-		System.out.println(_index + ":Backward Subsumption - Deletion of subsumed clauses: " + _resolventen);
+		System.out.println(_index + ":Backward Subsumption - resolvents after deletion of subsumed clauses: " + _resolventen);
 		if (_fw) {
 			_formula_vars = _formula.vars();
 			_formula_vars.addAll(_subsumed_resolvents.vars());
@@ -438,7 +438,7 @@ public class Resolution extends Subject {
 
 		if (!_resolventen.is_empty()) execute_resolution(_heuristik);
 		else {
-			System.out.println(_index + ": End Resolution: formula has no resolvents");
+			System.out.println(_index + ":End Resolution: formula has no resolvents");
 		}
 	}
 
