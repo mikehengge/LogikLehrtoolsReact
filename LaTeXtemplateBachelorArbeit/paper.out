@@ -1,0 +1,32 @@
+\BOOKMARK [0][-]{chapter*.3}{Abbildungsverzeichnis}{}% 1
+\BOOKMARK [0][-]{chapter*.4}{Abk\374rzungsverzeichnis}{}% 2
+\BOOKMARK [0][-]{chapter.1}{Einleitung}{}% 3
+\BOOKMARK [0][-]{chapter.2}{React - Theorie und Evaluation}{}% 4
+\BOOKMARK [1][-]{section.2.1}{Motivation}{chapter.2}% 5
+\BOOKMARK [1][-]{section.2.2}{Architektur}{chapter.2}% 6
+\BOOKMARK [2][-]{subsection.2.2.1}{Virtual DOM}{section.2.2}% 7
+\BOOKMARK [2][-]{subsection.2.2.2}{Komponenten}{section.2.2}% 8
+\BOOKMARK [2][-]{subsection.2.2.3}{Unidirektionaler Datenfluss}{section.2.2}% 9
+\BOOKMARK [2][-]{subsection.2.2.4}{JSX}{section.2.2}% 10
+\BOOKMARK [1][-]{section.2.3}{React Native?}{chapter.2}% 11
+\BOOKMARK [1][-]{section.2.4}{St\344rken}{chapter.2}% 12
+\BOOKMARK [1][-]{section.2.5}{Kritik}{chapter.2}% 13
+\BOOKMARK [1][-]{section.2.6}{Alternativen}{chapter.2}% 14
+\BOOKMARK [2][-]{subsection.2.6.1}{Angular}{section.2.6}% 15
+\BOOKMARK [2][-]{subsection.2.6.2}{Vue}{section.2.6}% 16
+\BOOKMARK [2][-]{subsection.2.6.3}{Preact}{section.2.6}% 17
+\BOOKMARK [2][-]{subsection.2.6.4}{Riot}{section.2.6}% 18
+\BOOKMARK [1][-]{section.2.7}{Fazit}{chapter.2}% 19
+\BOOKMARK [0][-]{chapter.3}{React in der Praxis}{}% 20
+\BOOKMARK [1][-]{section.3.1}{Entwicklungsumgebung}{chapter.3}% 21
+\BOOKMARK [2][-]{subsection.3.1.1}{Nodejs}{section.3.1}% 22
+\BOOKMARK [2][-]{subsection.3.1.2}{Toolchains f\374r React}{section.3.1}% 23
+\BOOKMARK [1][-]{section.3.2}{React in HTML-Seiten einf\374gen}{chapter.3}% 24
+\BOOKMARK [0][-]{chapter.4}{Logik Lehrtools mit React}{}% 25
+\BOOKMARK [1][-]{section.4.1}{Ablauf}{chapter.4}% 26
+\BOOKMARK [1][-]{section.4.2}{Anpassung der Java Software}{chapter.4}% 27
+\BOOKMARK [1][-]{section.4.3}{Webserver}{chapter.4}% 28
+\BOOKMARK [1][-]{section.4.4}{React Applikation}{chapter.4}% 29
+\BOOKMARK [1][-]{section.4.5}{Server API}{chapter.4}% 30
+\BOOKMARK [1][-]{section.4.6}{Ausblick}{chapter.4}% 31
+\BOOKMARK [0][-]{section.4.6}{Literaturverzeichnis}{}% 32

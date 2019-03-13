@@ -1,0 +1,32 @@
+\contentsline {chapter}{Abbildungsverzeichnis}{v}{chapter*.3}
+\contentsline {chapter}{Abk\"urzungsverzeichnis}{vii}{chapter*.4}
+\contentsline {chapter}{\numberline {1}Einleitung}{1}{chapter.1}
+\contentsline {chapter}{\numberline {2}React - Theorie und Evaluation}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}Motivation}{3}{section.2.1}
+\contentsline {section}{\numberline {2.2}Architektur}{3}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Virtual DOM}{4}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Komponenten}{5}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}Unidirektionaler Datenfluss}{5}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.4}JSX}{7}{subsection.2.2.4}
+\contentsline {section}{\numberline {2.3}React Native?}{9}{section.2.3}
+\contentsline {section}{\numberline {2.4}St\IeC {\"a}rken}{9}{section.2.4}
+\contentsline {section}{\numberline {2.5}Kritik}{9}{section.2.5}
+\contentsline {section}{\numberline {2.6}Alternativen}{10}{section.2.6}
+\contentsline {subsection}{\numberline {2.6.1}Angular}{10}{subsection.2.6.1}
+\contentsline {subsection}{\numberline {2.6.2}Vue}{11}{subsection.2.6.2}
+\contentsline {subsection}{\numberline {2.6.3}Preact}{12}{subsection.2.6.3}
+\contentsline {subsection}{\numberline {2.6.4}Riot}{12}{subsection.2.6.4}
+\contentsline {section}{\numberline {2.7}Fazit}{13}{section.2.7}
+\contentsline {chapter}{\numberline {3}React in der Praxis}{15}{chapter.3}
+\contentsline {section}{\numberline {3.1}Entwicklungsumgebung}{15}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Nodejs}{15}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Toolchains f\IeC {\"u}r React}{16}{subsection.3.1.2}
+\contentsline {section}{\numberline {3.2}React in HTML-Seiten einf\IeC {\"u}gen}{17}{section.3.2}
+\contentsline {chapter}{\numberline {4}Logik Lehrtools mit React}{19}{chapter.4}
+\contentsline {section}{\numberline {4.1}Ablauf}{20}{section.4.1}
+\contentsline {section}{\numberline {4.2}Anpassung der Java Software}{20}{section.4.2}
+\contentsline {section}{\numberline {4.3}Webserver}{22}{section.4.3}
+\contentsline {section}{\numberline {4.4}React Applikation}{22}{section.4.4}
+\contentsline {section}{\numberline {4.5}Server API}{26}{section.4.5}
+\contentsline {section}{\numberline {4.6}Ausblick}{26}{section.4.6}
+\contentsline {chapter}{Literaturverzeichnis}{27}{section.4.6}

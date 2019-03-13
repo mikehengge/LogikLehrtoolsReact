@@ -1,0 +1,23 @@
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces React Virtual DOM\relax }}{4}{figure.caption.6}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Hello World Komponente\relax }}{5}{figure.caption.7}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Hello World Komponente\relax }}{5}{figure.caption.8}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Unidirektionaler Datenfluss in React\relax }}{6}{figure.caption.9}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Ungeordnete Liste in JSX\relax }}{7}{figure.caption.10}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces JavaScript in JSX\relax }}{8}{figure.caption.11}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Funktion setResult in JSX\relax }}{8}{figure.caption.11}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Trend der Suchanfragen seit 2014 f\IeC {\"u}r React, Angular und Vue \cite {react}\relax }}{12}{figure.caption.12}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces NPM Dialog\relax }}{16}{figure.caption.13}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Erstellen eines Dom-Containers\relax }}{17}{figure.caption.14}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Button.js: React-Script zur Verwendung des Dom-Containers\relax }}{17}{figure.caption.14}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Laden von React (Zeile 4+5) \& Button.js (Zeile 7)\relax }}{18}{figure.caption.15}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Ablauf der Anwendung\relax }}{20}{figure.caption.16}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Anwendung des Java-Programms mit Ausgabe\relax }}{22}{figure.caption.17}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Eingabemaske\relax }}{23}{figure.caption.18}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Eingabefeld der Formel in JSX-Syntax\relax }}{23}{figure.caption.19}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces handleChange-Funktion\relax }}{24}{figure.caption.20}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces GET-Request f\IeC {\"u}r die Resolution\relax }}{24}{figure.caption.21}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Ergebnistabelle\relax }}{25}{figure.caption.22}

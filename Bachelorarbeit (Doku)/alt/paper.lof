@@ -1,0 +1,24 @@
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces React Virtual DOM \cite {Abb2.1}\relax }}{4}{figure.caption.3}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Hello World Komponente \cite {eig}\relax }}{5}{figure.caption.4}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Hello World Komponente \cite {6}\relax }}{5}{figure.caption.5}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Unidirektionaler Datenfluss in React \cite {eig}\relax }}{6}{figure.caption.6}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Ungeordnete Liste in JSX \cite {eig}\relax }}{7}{figure.caption.7}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces JavaScript in JSX \cite {eig}\relax }}{8}{figure.caption.8}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Funktion setResult in JSX \cite {eig}\relax }}{8}{figure.caption.8}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Trend der Suchanfragen seit 2014 f\IeC {\"u}r React, Angular und Vue \cite {Abb2.8}\relax }}{11}{figure.caption.9}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces NPM Dialog \cite {eig}\relax }}{15}{figure.caption.10}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Erstellen eines Dom-Containers \cite {eig}\relax }}{16}{figure.caption.11}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Button.js: React-Script zur Verwendung des Dom-Containers \cite {eig}\relax }}{16}{figure.caption.11}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Laden von React (Zeile 4+5) \& Button.js (Zeile 7) \cite {eig}\relax }}{17}{figure.caption.12}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces React Developer Tools\relax }}{18}{figure.caption.13}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Ablauf der Anwendung \cite {eig}\relax }}{20}{figure.caption.14}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Anwendung des Java-Programms mit Ausgabe \cite {eig}\relax }}{22}{figure.caption.15}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Eingabemaske \cite {eig}\relax }}{23}{figure.caption.16}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Eingabemaske in JSX-Syntax \cite {eig}\relax }}{23}{figure.caption.16}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces handleChange-Funktion \cite {eig}\relax }}{24}{figure.caption.17}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces GET-Request f\IeC {\"u}r die Resolution \cite {eig}\relax }}{24}{figure.caption.18}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Ergebnistabelle \cite {eig}\relax }}{25}{figure.caption.19}

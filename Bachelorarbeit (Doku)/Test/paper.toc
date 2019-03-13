@@ -1,0 +1,27 @@
+\contentsline {chapter}{Abbildungsverzeichnis}{v}{chapter*.3}
+\contentsline {chapter}{Abk\"urzungsverzeichnis}{vii}{chapter*.4}
+\contentsline {chapter}{\numberline {1}Einleitung}{1}{chapter.1}
+\contentsline {chapter}{\numberline {2}React - Theorie und Evaluation}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}Motivation}{3}{section.2.1}
+\contentsline {section}{\numberline {2.2}Architektur}{3}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Virtual DOM}{4}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Komponenten}{5}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}Unidirektionaler Datenfluss}{5}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.4}JSX}{6}{subsection.2.2.4}
+\contentsline {section}{\numberline {2.3}React Native}{7}{section.2.3}
+\contentsline {section}{\numberline {2.4}St\IeC {\"a}rken}{7}{section.2.4}
+\contentsline {section}{\numberline {2.5}Kritik}{7}{section.2.5}
+\contentsline {section}{\numberline {2.6}Alternative Frameworks und Bibliotheken}{7}{section.2.6}
+\contentsline {section}{\numberline {2.7}Fazit}{7}{section.2.7}
+\contentsline {chapter}{\numberline {3}React in der Praxis}{9}{chapter.3}
+\contentsline {section}{\numberline {3.1}Entwicklungsumgebung}{9}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Nodejs}{9}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Toolchains f\IeC {\"u}r React}{10}{subsection.3.1.2}
+\contentsline {section}{\numberline {3.2}React in HTML-Seiten einf\IeC {\"u}gen}{11}{section.3.2}
+\contentsline {chapter}{\numberline {4}Logik Lehrtools mit React}{13}{chapter.4}
+\contentsline {section}{\numberline {4.1}Ablauf}{14}{section.4.1}
+\contentsline {section}{\numberline {4.2}Anpassung der Java Software}{14}{section.4.2}
+\contentsline {section}{\numberline {4.3}Webserver}{16}{section.4.3}
+\contentsline {section}{\numberline {4.4}React Applikation}{16}{section.4.4}
+\contentsline {section}{\numberline {4.5}Server API}{20}{section.4.5}
+\contentsline {chapter}{Literaturverzeichnis}{21}{section.4.5}
