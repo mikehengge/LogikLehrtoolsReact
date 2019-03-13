@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane id="root_node" fx:id="root_node" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" stylesheets="@Main_Menu.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lehrtools.view.Main_Menu_Controller">
+   <center>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <center>
+            <AnchorPane id="pane_center">
+               <children>
+                  <HBox alignment="CENTER" layoutX="50.0" layoutY="88.0" spacing="20.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="88.0">
+                     <children>
+                        <TextField id="pane_center_textfield" fx:id="pane_center_textfield" layoutX="14.0" layoutY="79.0" maxHeight="50.0" minHeight="50.0" onKeyPressed="#key_pressedEventHandler" prefHeight="50.0" prefWidth="604.0" promptText="Bitte geben Sie hier Ihre Formel ein." HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </TextField>
+                        <Button id="button" fx:id="start_button" layoutX="629.0" layoutY="92.0" mnemonicParsing="false" onAction="#buttonEventHandler" prefHeight="32.0" prefWidth="83.0" text="Start" />
+                     </children>
+                  </HBox>
+                  <Label id="pane_center_label" fx:id="pane_center_label" layoutX="37.0" layoutY="30.0" prefHeight="44.0" prefWidth="700.0" text=" Formeleingabe :" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="30.0" />
+                  <HBox id="radio_box" fx:id="toggle_box" layoutX="50.0" layoutY="276.0" prefHeight="55.0" prefWidth="601.0" AnchorPane.bottomAnchor="256.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                  <Label id="toggle_label" fx:id="language_info" alignment="TOP_LEFT" layoutX="50.0" layoutY="331.0" prefHeight="166.0" prefWidth="724.0" textFill="WHITE" AnchorPane.bottomAnchor="90.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label id="error_label" fx:id="error_info_text" layoutX="50.0" layoutY="500.0" maxHeight="30.0" minHeight="30.0" prefHeight="30.0" prefWidth="703.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" />
+                  <Label id="error_label" fx:id="error_info_method" layoutX="50.0" layoutY="527.0" maxHeight="30.0" minHeight="30.0" prefHeight="30.0" prefWidth="703.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" />
+                  <Label id="error_label" fx:id="error_info_language" layoutX="61.0" layoutY="561.0" maxHeight="30.0" minHeight="30.0" prefHeight="30.0" prefWidth="703.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" />
+                  <ScrollPane id="formula_scroll_pane" fx:id="formula_scroll_pane" layoutX="50.0" layoutY="146.0" prefHeight="130.0" prefWidth="724.0" AnchorPane.bottomAnchor="311.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="146.0">
+                     <content>
+                        <VBox fx:id="multiple_inputs_vbox" prefHeight="126.0" prefWidth="274.0" />
+                     </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+         </center>
+         <bottom>
+            <Pane id="pane_bottom" prefHeight="110.0" prefWidth="824.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label id="info_label" fx:id="method_info" alignment="TOP_LEFT" layoutX="27.0" layoutY="6.0" prefHeight="94.0" prefWidth="771.0" />
+               </children>
+            </Pane>
+         </bottom>
+      </BorderPane>
+   </center>
+   <left>
+      <Pane id="pane_left" prefHeight="697.0" prefWidth="206.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox layoutX="-1.0" layoutY="13.0" prefHeight="259.0" prefWidth="202.0">
+               <children>
+                  <Label id="pane_left_label" prefHeight="62.0" prefWidth="202.0" text="Verfahren" />
+                  <Label id="pane_left_selection" fx:id="label_resolution" onMouseClicked="#label_clickedEventHandler" prefHeight="62.0" prefWidth="202.0" text="Resolution" />
+                  <Label id="pane_left_selection" fx:id="label_bd_resolution" layoutX="10.0" layoutY="72.0" onMouseClicked="#label_clickedEventHandler" prefHeight="62.0" prefWidth="202.0" text="BD-Resolution" />
+                  <Label id="pane_left_selection" fx:id="label_dp60" layoutX="10.0" layoutY="134.0" onMouseClicked="#label_clickedEventHandler" prefHeight="62.0" prefWidth="202.0" text="DP60" />
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+   </left>
+   <top>
+      <AnchorPane id="pane_top" prefHeight="51.0" prefWidth="1024.0">
+         <children>
+            <Label id="pane_top_label" layoutX="14.0" layoutY="3.0" prefHeight="68.0" prefWidth="226.0" text="Logik-Tool" AnchorPane.leftAnchor="14.0" />
+            <HBox alignment="CENTER" layoutX="875.0" layoutY="14.0" AnchorPane.rightAnchor="14.0">
+               <children>
+                  <Label id="control_button" fx:id="minimize" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" text="___">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Label>
+                  <Label id="control_button" fx:id="maximize" alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="45.0" prefWidth="45.0" text="□">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                  </Label>
+                  <Label id="control_button" fx:id="fullscreen" alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="55.0" layoutY="10.0" prefHeight="45.0" prefWidth="45.0" text="🗖">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                  </Label>
+                  <Label id="control_button" fx:id="close" alignment="CENTER" prefHeight="45.0" prefWidth="45.0" text="×">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>

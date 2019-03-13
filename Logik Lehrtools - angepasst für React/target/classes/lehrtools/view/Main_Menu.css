@@ -1,0 +1,246 @@
+.root{
+
+    
+    /* @SuppressWarning */
+    -color-background-1 : #263238;
+    /* @SuppressWarning */
+    -color-background-2 : #37474F;
+    /* @SuppressWarning */
+    -color-background-3 : #455A64;
+    /* @SuppressWarning */
+    -color-background-4 : #546E7A;
+    
+    /* @SuppressWarning */
+    -color-secondary-1 :  #00527A;
+    
+      /* @SuppressWarning */
+    -color-button_background :  #607D8B;
+    /* @SuppressWarning */
+    -color-button_background_hover :#78909C;
+    
+    
+    /* @SuppressWarning */
+    -color-main_Title :  white;
+    /* @SuppressWarning */
+    -color-button-text :  white;
+    /* @SuppressWarning */
+    -color-step_label-text :#B6FF14;
+    /* @SuppressWarning */
+    -color-step_label-text_inactive :#7DB500;
+    /* @SuppressWarning */
+    -color-label-selected : #00527A;
+    /* @SuppressWarning */
+    -color-label-selected-border : #06AEFF;
+     /* @SuppressWarning */
+    -color-error-text : #1FB4FD;
+     /* @SuppressWarning */
+    -color-radio-button-text : #1FB4FD;
+}
+
+
+
+#root_node, #pane_center {
+    
+    -fx-background-color: derive(-color-background-3, 0%);
+   
+}
+
+
+
+#pane_top
+{
+    -fx-background-color: derive(-color-background-1, 0%);
+    -fx-effect: dropshadow( gaussian , black , 10,0,5,5 );  
+}
+
+#pane_left, #pane_bottom
+{
+    -fx-background-color: derive(-color-background-1, 0%);
+    -fx-effect: dropshadow( gaussian , black , 10,0,2,2 );  
+}
+
+#pane_bottom
+{
+    -fx-effect: dropshadow( gaussian , black , 10,0,0,-1 );  
+}
+
+#pane_left_label, #pane_top_label
+{
+    -fx-background-color: derive(-color-background-1, 0%);
+    -fx-text-fill:	 derive(-color-step_label-text, 0%);
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+}
+
+#pane_left_label
+{
+    -fx-font-size: 24px;
+    -fx-border-color:  derive(-color-background-2,0%);
+    -fx-border-width : 0 0 1 0;
+    
+}
+#pane_top_label
+{
+    -fx-font-size: 32px;
+    -fx-text-fill: white;
+    
+}
+
+#pane_center_label
+{
+    -fx-background-color: derive(-color-secondary-1, 0%);
+    -fx-text-fill:	 derive(-color-step_label-text, 0%);
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow( gaussian , black , 10,0,2,2 );
+    -fx-spacing: 0 0 0 20;
+}
+
+#pane_left_selection
+{
+    -fx-background-color: derive(-color-background-1, 0%);
+    -fx-text-fill:	 derive(-color-step_label-text, 0%);
+    -fx-font-size: 18px;
+    -fx-alignment: center;
+    -fx-border-color:  derive(-color-background-1 ,0%);
+    -fx-border-width : 0 0 0 5;
+}
+
+
+#pane_left_selection:hover
+{
+    -fx-background-color: derive(-color-background-4, 0%);
+    -fx-text-fill:	 derive(-color-step_label-text, 0%);
+    -fx-font-size: 18px;
+    -fx-alignment: center;
+    -fx-border-color:  derive(-color-background-4 ,0%);
+    -fx-border-width : 0 0 0 5;
+}
+ 
+#pane_left_selection_selected
+{
+    -fx-background-color: derive(-color-label-selected ,0%);
+    -fx-text-fill:	 derive(-color-step_label-text, 0%);
+    -fx-font-size: 18px;
+    -fx-alignment: center;
+    -fx-border-color:  derive(-color-label-selected-border ,0%);
+    -fx-border-width : 0 0 0 5;
+}
+
+
+#button
+{
+    -fx-background-color: derive(-color-button_background, 0%);
+    -fx-text-fill:	 derive(-color-button-text, 0%);
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow( gaussian , black , 10,0,2,5 );    
+        
+}
+
+#button:hover
+{
+    -fx-background-color: derive(-color-button_background_hover, 0%);
+    -fx-effect: dropshadow( gaussian , black , 10,0,5,5 );
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+#button:pressed
+{
+    -fx-background-color: derive(-color-button_background, 0%); 
+    -fx-effect: dropshadow( gaussian , black , 0,0,0,0 );
+    -fx-scale-x: 1;
+    -fx-scale-y: 1;
+    -fx-translate-y: 4;
+        
+}
+
+#pane_center_textfield
+{
+     -fx-background-color: white;
+     -fx-border-color:  derive(-color-label-selected-border ,0%);
+     -fx-border-width : 0 0 5 0;
+}
+
+#error_label
+{
+    -fx-text-fill:	derive(-color-error-text ,0%);
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-spacing: 0 0 0 20;
+}
+
+#radio_box
+{
+    -fx-padding: 0 0 0 70;
+    -fx-spacing : 20;
+    -fx-alignment: CENTER_LEFT;
+    -fx-background-color: derive(-color-background-2, 0%); 
+}
+#toggle_button
+{
+    -fx-background-color: derive(-color-button_background, 0%);
+    -fx-text-fill:	 derive(-color-button-text, 0%);
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow( gaussian , black , 10,0,2,5 ); 
+    -fx-background-radius: 10, 9, 8;
+    
+}
+
+#toggle_button:hover
+{
+    -fx-background-color: derive(-color-button_background_hover, 0%);
+    -fx-effect: dropshadow( gaussian , black , 15,0,4,7 );
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-background-radius: 10, 9, 8;
+}
+   
+#toggle_button:selected
+{
+    -fx-background-color:  derive(-color-background-1, 0%); 
+    -fx-effect: dropshadow( gaussian , black , 0,0,0,0 );
+    -fx-scale-x: 1;
+    -fx-scale-y: 1;
+    -fx-background-radius: 10, 9, 8;
+    -fx-translate-y: 4;
+}
+
+#toggle_label, #new_input_label
+{
+    -fx-text-fill:	 derive(-color-button-text, 0%);
+    -fx-font-size: 18px;
+  
+    
+}
+
+#info_label
+{
+    -fx-text-fill:	derive(-color-step_label-text ,0%);
+    -fx-font-size: 18px;
+}
+
+#control_button
+{
+    -fx-background-color: derive(-color-background-1, 0%);
+    -fx-text-fill:	 derive(-color-step_label-text, 0%);
+    -fx-border-color:  derive(-color-background-1 ,0%);
+    -fx-border-width : 1 1 1 1;
+    
+}
+
+
+#control_button:hover
+{
+    -fx-background-color: derive(-color-background-4, 0%);
+    -fx-text-fill:	 derive(-color-step_label-text, 0%);
+    -fx-border-color:  derive(-color-background-4 ,0%);
+    -fx-border-width : 1 1 1 1;
+   
+}    
+
+#formula_scroll_pane
+{
+    -fx-background :  derive(-color-background-3, 0%);
+    -fx-background-color: derive(-color-background-3, 0%);
+}
