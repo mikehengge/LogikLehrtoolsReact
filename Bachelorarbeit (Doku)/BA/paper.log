@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6730 64-bit) (preloaded format=pdflatex 2018.10.23)  9 MAR 2019 08:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6730 64-bit) (preloaded format=pdflatex 2018.10.23)  13 MAR 2019 14:15
 entering extended mode
-**"D:/GitHub/LogikLehrtoolsReact/Bachelorarbeit (Doku)/Arbeit Latex/paper.tex"
-("D:/GitHub/LogikLehrtoolsReact/Bachelorarbeit (Doku)/Arbeit Latex/paper.tex"
+**"D:/GitHub/LogikLehrtoolsReact/Bachelorarbeit (Doku)/alt/paper.tex"
+("D:/GitHub/LogikLehrtoolsReact/Bachelorarbeit (Doku)/alt/paper.tex"
 LaTeX2e <2018-04-01> patch level 5
 (D:\MikTex\tex\latex\base\report.cls
 Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
@@ -60,6 +60,18 @@ Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \Gin@req@height=\dimen112
 \Gin@req@width=\dimen113
 )
+(D:\MikTex\tex\latex\base\inputenc.sty
+Package: inputenc 2018/04/06 v1.3b Input encoding file
+\inpenc@prehook=\toks15
+\inpenc@posthook=\toks16
+) (D:\MikTex\tex\latex\float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count89
+\float@exts=\toks17
+\float@box=\box26
+\@float@everytoks=\toks18
+\@floatcapt=\box27
+)
 (D:\MikTex\tex\latex\base\latexsym.sty
 Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
 \symlasy=\mathgroup4
@@ -80,20 +92,9 @@ Package caption3 Info: TeX engine: e-TeX on input line 64.
 \caption@parindent=\dimen119
 \caption@hangindent=\dimen120
 )
-\c@caption@flags=\count89
-\c@ContinuedFloat=\count90
-)
-(D:\MikTex\tex\latex\base\inputenc.sty
-Package: inputenc 2018/04/06 v1.3b Input encoding file
-\inpenc@prehook=\toks15
-\inpenc@posthook=\toks16
-) (D:\MikTex\tex\latex\float\float.sty
-Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count91
-\float@exts=\toks17
-\float@box=\box26
-\@float@everytoks=\toks18
-\@floatcapt=\box27
+\c@caption@flags=\count90
+\c@ContinuedFloat=\count91
+Package caption Info: float package is loaded.
 )
 (D:\MikTex\tex\latex\graphics\color.sty
 Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
@@ -217,8 +218,14 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip43
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 23.
+Package hyperref Info: Option `colorlinks' set `true' on input line 33.
  (paper.aux
+
+LaTeX Warning: Label `Hello World Komponente' multiply defined.
+
+
+LaTeX Warning: Label `fig1_1' multiply defined.
+
 
 LaTeX Warning: Label `fig1_1' multiply defined.
 
@@ -249,20 +256,20 @@ LaTeX Warning: Label `fig1_1' multiply defined.
 )
 \openout1 = `paper.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
  (D:\MikTex\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count102
@@ -290,11 +297,10 @@ G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
 Package caption Info: Begin \AtBeginDocument code.
-Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \AtBeginShipoutBox=\box29
-Package hyperref Info: Link coloring ON on input line 38.
+Package hyperref Info: Link coloring ON on input line 47.
 
 (D:\MikTex\tex\latex\hyperref\nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -304,9 +310,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count108
 )
-LaTeX Info: Redefining \ref on input line 38.
-LaTeX Info: Redefining \pageref on input line 38.
-LaTeX Info: Redefining \nameref on input line 38.
+LaTeX Info: Redefining \ref on input line 47.
+LaTeX Info: Redefining \pageref on input line 47.
+LaTeX Info: Redefining \nameref on input line 47.
  (paper.out) (paper.out)
 \@outlinefile=\write3
 \openout3 = `paper.out'.
@@ -316,42 +322,28 @@ LaTeX Info: Redefining \nameref on input line 38.
 
 {C:/Users/mikeh/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 79.
+(Font)              <12> on input line 81.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 79.
+(Font)              <8> on input line 81.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 79.
-LaTeX Font Info:    Try loading font information for U+lasy on input line 79.
+(Font)              <6> on input line 81.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 81.
 
 (D:\MikTex\tex\latex\base\ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
-) [2] [1] [2] (paper.toc [3
-
+) [2] (paper.toc [1
 
 ])
 \tf@toc=\write4
 \openout4 = `paper.toc'.
 
- [4] (paper.lof)
+ [2] (paper.lof)
 \tf@lof=\write5
 \openout5 = `paper.lof'.
 
-[5
 
+[3
 
-] [6
-
-] (paper.lot)
-\tf@lot=\write6
-\openout6 = `paper.lot'.
-
- [7
-
-] [8
-
-] [9
-
-] [10
 
 ] (sec1.tex
 Kapitel 1.
@@ -371,12 +363,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--13
 
  []
 
-
-Underfull \hbox (badness 1320) in paragraph at lines 6--13
-\OT1/cmr/m/n/12 M[]oglich-keit f[]ur Stu-den-ten bie-ten Bei-spie-le selbst nac
-h-zu-voll-zie-hen, den
- []
-
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
@@ -384,249 +370,456 @@ been already used, duplicate ignored
 l.13 
       [1
 
+
 ])pdfTeX warning (ext4): destination with the same identifier (name{page.2}) ha
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.173 \cleardoublepage
-                       [2] (sec2.tex
+l.128 \clearpage
+                 [2] (sec2.tex
 Kapitel 2.
-<../Abbildungen/virtualDom.png, id=284, 903.375pt x 493.845pt>
-File: ../Abbildungen/virtualDom.png Graphic file (type png)
-<use ../Abbildungen/virtualDom.png>
-Package pdftex.def Info: ../Abbildungen/virtualDom.png  used on input line 19.
-(pdftex.def)             Requested size: 398.33858pt x 217.75966pt.
-
-Underfull \hbox (badness 1205) in paragraph at lines 16--22
-\OT1/cmr/m/n/12 Rol-le in-ne. Mit ihr kann der Ele-ment-baum ei-ner Web-sei-te 
-aus-ge-le-sen,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 16--22
-
- []
-
-
-Underfull \vbox (badness 1189) has occurred while \output is active []
-
- [3
+[3
 
 
 ]
+<../Abbildungen/virtualDom.png, id=319, 903.375pt x 493.845pt>
+File: ../Abbildungen/virtualDom.png Graphic file (type png)
+<use ../Abbildungen/virtualDom.png>
+Package pdftex.def Info: ../Abbildungen/virtualDom.png  used on input line 18.
+(pdftex.def)             Requested size: 398.33858pt x 217.75966pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 15--21
+
+ []
+
 [4 <../Abbildungen/virtualDom.png>]
-<../Abbildungen/dataflow.png, id=293, 402.50375pt x 320.19624pt>
+<../Abbildungen/compHello.png, id=327, 375.20175pt x 26.499pt>
+File: ../Abbildungen/compHello.png Graphic file (type png)
+<use ../Abbildungen/compHello.png>
+Package pdftex.def Info: ../Abbildungen/compHello.png  used on input line 26.
+(pdftex.def)             Requested size: 341.43306pt x 24.1145pt.
+<../Abbildungen/compContainer.png, id=331, 661.87276pt x 232.4685pt>
+File: ../Abbildungen/compContainer.png Graphic file (type png)
+<use ../Abbildungen/compContainer.png>
+Package pdftex.def Info: ../Abbildungen/compContainer.png  used on input line 3
+2.
+(pdftex.def)             Requested size: 341.43306pt x 119.92302pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--35
+
+ []
+
+[5 <../Abbildungen/compHello.png> <../Abbildungen/compContainer.png>]
+<../Abbildungen/dataflow.png, id=342, 402.50375pt x 320.19624pt>
 File: ../Abbildungen/dataflow.png Graphic file (type png)
 <use ../Abbildungen/dataflow.png>
-Package pdftex.def Info: ../Abbildungen/dataflow.png  used on input line 30.
+Package pdftex.def Info: ../Abbildungen/dataflow.png  used on input line 41.
 (pdftex.def)             Requested size: 341.43306pt x 271.6111pt.
 
-Underfull \hbox (badness 1661) in paragraph at lines 27--33
-\OT1/cmr/m/n/12 Kon-zept nur die View-Komponente und []uberl[]asst dem Ent-wick
--ler die
+Underfull \hbox (badness 1052) in paragraph at lines 38--44
+\OT1/cmr/m/n/12 ob und wel-che wei-te-ren Kom-po-nen-ten ver-wen-det wer-den [[
+]]. In ei-nem
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 27--33
+Underfull \hbox (badness 10000) in paragraph at lines 38--44
 
  []
 
+[6
 
-Underfull \hbox (badness 10000) in paragraph at lines 34--36
+ <../Abbildungen/dataflow.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 45--47
 
  []
 
-[5 <../Abbildungen/dataflow.png>]
-<../Abbildungen/jsxList.png, id=300, 333.04425pt x 171.64125pt>
+<../Abbildungen/jsxList.png, id=352, 333.04425pt x 171.64125pt>
 File: ../Abbildungen/jsxList.png Graphic file (type png)
 <use ../Abbildungen/jsxList.png>
-Package pdftex.def Info: ../Abbildungen/jsxList.png  used on input line 39.
+Package pdftex.def Info: ../Abbildungen/jsxList.png  used on input line 50.
 (pdftex.def)             Requested size: 341.43306pt x 175.97006pt.
-<../Abbildungen/jsxExpression.png, id=301, 364.9635pt x 37.3395pt>
+<../Abbildungen/jsxExpression.png, id=355, 364.9635pt x 37.3395pt>
 File: ../Abbildungen/jsxExpression.png Graphic file (type png)
 <use ../Abbildungen/jsxExpression.png>
-Package pdftex.def Info: ../Abbildungen/jsxExpression.png  used on input line 4
-5.
+Package pdftex.def Info: ../Abbildungen/jsxExpression.png  used on input line 5
+6.
 (pdftex.def)             Requested size: 341.43306pt x 34.93445pt.
-<../Abbildungen/jsxSetResult.png, id=302, 465.53925pt x 186.6975pt>
+<../Abbildungen/jsxSetResult.png, id=358, 465.53925pt x 186.6975pt>
 File: ../Abbildungen/jsxSetResult.png Graphic file (type png)
 <use ../Abbildungen/jsxSetResult.png>
-Package pdftex.def Info: ../Abbildungen/jsxSetResult.png  used on input line 51
+Package pdftex.def Info: ../Abbildungen/jsxSetResult.png  used on input line 60
 .
 (pdftex.def)             Requested size: 341.43306pt x 136.92616pt.
 
+Underfull \hbox (badness 10000) in paragraph at lines 48--63
 
-LaTeX Warning: Citation `Quelle: eigener Code' on page 6 undefined on input lin
-e 52.
-
-
-LaTeX Warning: Citation `Quelle: eigener Code' on page 6 undefined on input lin
-e 52.
+ []
 
 
-Underfull \hbox (badness 1803) in paragraph at lines 37--54
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [7
+
+ <../Abbildungen/jsxList.png>]
+Underfull \hbox (badness 1803) in paragraph at lines 64--67
 \OT1/cmr/m/n/12 m[]oglich vor-her de-fi-nier-te Funk-tio-nen und vo-r-im-ple-me
 n-tier-te Ja-vaS-cript
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 37--54
+Underfull \hbox (badness 1596) in paragraph at lines 64--67
+\OT1/cmr/m/n/12 vor-he-ri-gen Kom-pi-lier-schritt vom Brow-ser ge-le-sen und in
+-ter-pre-tiert. Da
+ []
+
+
+Underfull \hbox (badness 1308) in paragraph at lines 64--67
+\OT1/cmr/m/n/12 Babel-Projekts, wel-ches auch von den groen React-Nutzern Fa-c
+e-book,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 64--67
 
  []
 
-[6 <../Abbildungen/jsxList.png>]) [7 <../Abbildungen/jsxExpression.png> <../Abb
-ildungen/jsxSetResult.png>] [8
 
-] (sec4.tex
+Underfull \hbox (badness 10000) in paragraph at lines 68--71
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [8 <../Abbildungen/jsxExpression.png> <../Abbildungen/jsxSetResult.png>] [9]
+Underfull \hbox (badness 10000) in paragraph at lines 78--79
+
+ []
+
+<../Abbildungen/reactVueAng.png, id=387, 866.63776pt x 461.92575pt>
+File: ../Abbildungen/reactVueAng.png Graphic file (type png)
+<use ../Abbildungen/reactVueAng.png>
+Package pdftex.def Info: ../Abbildungen/reactVueAng.png  used on input line 88.
+
+(pdftex.def)             Requested size: 341.43306pt x 181.9829pt.
+
+Underfull \hbox (badness 1005) in paragraph at lines 83--94
+\OT1/cmr/m/n/12 auf. Wie Re-act ver-wen-det auch Vue ei-ne vir-tu-el-le DOM, ar
+-bei-tet mit
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 83--94
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 83--94
+
+ []
+
+
+Underfull \hbox (badness 1910) in paragraph at lines 83--94
+\OT1/cmr/m/n/12 Vue kann als viel-ver-spre-chen-de Al-ter-na-ti-ve zu Re-act ge
+-se-hen wer-den.
+ []
+
+[10]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [11 <../Abbildungen/reactVueAng.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 95--98
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--102
+
+ []
+
+)
+Underfull \hbox (badness 10000) in paragraph at lines 103--132
+
+ []
+
+
+Underfull \hbox (badness 1354) in paragraph at lines 103--132
+\OT1/cmr/m/n/12 Diese Sach-ver-hal-te f[]uhren zu fol-gen-der Schlussfol-ge-run
+g: Mo-men-tan ist
+ []
+
+[12] [13] (sec3.tex
 Kapitel 3.
-<../Abbildungen/npmRunStart.png, id=319, 420.97275pt x 134.30174pt>
+<../Abbildungen/npmRunStart.png, id=411, 420.97275pt x 134.30174pt>
 File: ../Abbildungen/npmRunStart.png Graphic file (type png)
 <use ../Abbildungen/npmRunStart.png>
-Package pdftex.def Info: ../Abbildungen/npmRunStart.png  used on input line 12.
+Package pdftex.def Info: ../Abbildungen/npmRunStart.png  used on input line 13.
 
 (pdftex.def)             Requested size: 398.33858pt x 127.07974pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [9
+ [14
+
 
 ]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [10 <../Abbildungen/npmRunStart.png>]
-<../Abbildungen/domContainer.png, id=329, 667.293pt x 96.36pt>
+[15 <../Abbildungen/npmRunStart.png>]
+<../Abbildungen/domContainer.png, id=428, 667.293pt x 96.36pt>
 File: ../Abbildungen/domContainer.png Graphic file (type png)
 <use ../Abbildungen/domContainer.png>
-Package pdftex.def Info: ../Abbildungen/domContainer.png  used on input line 23
+Package pdftex.def Info: ../Abbildungen/domContainer.png  used on input line 24
 .
 (pdftex.def)             Requested size: 398.33858pt x 57.52235pt.
-<../Abbildungen/buttonScript.png, id=330, 312.56775pt x 428.802pt>
+<../Abbildungen/buttonScript.png, id=431, 312.56775pt x 428.802pt>
 File: ../Abbildungen/buttonScript.png Graphic file (type png)
 <use ../Abbildungen/buttonScript.png>
-Package pdftex.def Info: ../Abbildungen/buttonScript.png  used on input line 27
+Package pdftex.def Info: ../Abbildungen/buttonScript.png  used on input line 28
 .
 (pdftex.def)             Requested size: 227.62204pt x 312.27042pt.
-<../Abbildungen/scriptLines.png, id=331, 666.0885pt x 187.902pt>
+<../Abbildungen/scriptLines.png, id=434, 666.0885pt x 187.902pt>
 File: ../Abbildungen/scriptLines.png Graphic file (type png)
 <use ../Abbildungen/scriptLines.png>
-Package pdftex.def Info: ../Abbildungen/scriptLines.png  used on input line 34.
+Package pdftex.def Info: ../Abbildungen/scriptLines.png  used on input line 35.
 
 (pdftex.def)             Requested size: 398.33858pt x 112.3722pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 21--38
+Underfull \hbox (badness 10000) in paragraph at lines 22--39
 
  []
 
-[11 <../Abbildungen/domContainer.png> <../Abbildungen/buttonScript.png>])
-[12 <../Abbildungen/scriptLines.png>] (sec5.tex
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [16
+
+ <../Abbildungen/domContainer.png> <../Abbildungen/buttonScript.png>] [17 <../A
+bbildungen/scriptLines.png>]
+<../Abbildungen/devTools.png, id=449, 642.4pt x 401.5pt>
+File: ../Abbildungen/devTools.png Graphic file (type png)
+<use ../Abbildungen/devTools.png>
+Package pdftex.def Info: ../Abbildungen/devTools.png  used on input line 44.
+(pdftex.def)             Requested size: 398.33858pt x 248.9703pt.
+
+Underfull \hbox (badness 1270) in paragraph at lines 41--47
+\OT1/cmr/m/n/12 F[]ur die Brow-ser Goo-gle Chro-me und Mo-zil-la Fi-re-fox bie-
+tet Fa-ce-book
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--47
+
+ []
+
+) [18
+
+ <../Abbildungen/devTools.png>] (sec4.tex
 Kapitel 4.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [13
+ [19
 
 
 ]
-<../Abbildungen/AblaufLehrtools.png, id=348, 729.927pt x 382.42876pt>
+<../Abbildungen/AblaufLehrtools.png, id=458, 722.09775pt x 385.44pt>
 File: ../Abbildungen/AblaufLehrtools.png Graphic file (type png)
 <use ../Abbildungen/AblaufLehrtools.png>
 Package pdftex.def Info: ../Abbildungen/AblaufLehrtools.png  used on input line
  11.
-(pdftex.def)             Requested size: 426.79134pt x 223.61195pt.
-<../Abbildungen/javaAusgabe.png, id=349, 629.35126pt x 340.8735pt>
+(pdftex.def)             Requested size: 426.79134pt x 227.80756pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--14
+
+ []
+
+<../Abbildungen/javaAusgabe.png, id=461, 629.35126pt x 340.8735pt>
 File: ../Abbildungen/javaAusgabe.png Graphic file (type png)
 <use ../Abbildungen/javaAusgabe.png>
-Package pdftex.def Info: ../Abbildungen/javaAusgabe.png  used on input line 23.
+Package pdftex.def Info: ../Abbildungen/javaAusgabe.png  used on input line 28.
 
 (pdftex.def)             Requested size: 398.33858pt x 215.75008pt.
 
-Underfull \hbox (badness 1264) in paragraph at lines 16--29
+Underfull \hbox (badness 1264) in paragraph at lines 19--32
 \OT1/cmr/m/n/12 Die Teil-schrit-te und das End-er-geb-nis wer-den []uber die Ko
 m-man-do-zei-le
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 16--29
+Underfull \hbox (badness 10000) in paragraph at lines 19--32
 
  []
 
-[14 <../Abbildungen/AblaufLehrtools.png>]
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--32
+
+ []
+
+[20 <../Abbildungen/AblaufLehrtools.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [15]
-<../Abbildungen/eingabe.png, id=358, 408.92775pt x 228.25275pt>
+ [21]
+[22 <../Abbildungen/javaAusgabe.png>]
+<../Abbildungen/eingabe.png, id=479, 408.92775pt x 228.25275pt>
 File: ../Abbildungen/eingabe.png Graphic file (type png)
 <use ../Abbildungen/eingabe.png>
-Package pdftex.def Info: ../Abbildungen/eingabe.png  used on input line 37.
+Package pdftex.def Info: ../Abbildungen/eingabe.png  used on input line 40.
 (pdftex.def)             Requested size: 408.92674pt x 228.25218pt.
-<../Abbildungen/formulaInput.png, id=359, 552.8655pt x 123.46124pt>
+<../Abbildungen/formulaInput.png, id=482, 552.8655pt x 123.46124pt>
 File: ../Abbildungen/formulaInput.png Graphic file (type png)
 <use ../Abbildungen/formulaInput.png>
 Package pdftex.def Info: ../Abbildungen/formulaInput.png  used on input line 43
 .
 (pdftex.def)             Requested size: 398.33858pt x 88.95605pt.
-<../Abbildungen/handleChange.png, id=360, 374.5995pt x 81.30376pt>
+<../Abbildungen/handleChange.png, id=485, 374.5995pt x 81.30376pt>
 File: ../Abbildungen/handleChange.png Graphic file (type png)
 <use ../Abbildungen/handleChange.png>
 Package pdftex.def Info: ../Abbildungen/handleChange.png  used on input line 49
 .
 (pdftex.def)             Requested size: 398.33858pt x 86.45695pt.
-<../Abbildungen/axiosResolution.png, id=361, 410.13225pt x 183.68625pt>
+<../Abbildungen/axiosResolution.png, id=488, 410.13225pt x 183.68625pt>
 File: ../Abbildungen/axiosResolution.png Graphic file (type png)
 <use ../Abbildungen/axiosResolution.png>
 Package pdftex.def Info: ../Abbildungen/axiosResolution.png  used on input line
- 57.
+ 58.
 (pdftex.def)             Requested size: 398.33858pt x 178.40524pt.
 
-[16 <../Abbildungen/javaAusgabe.png>] [17 <../Abbildungen/eingabe.png> <../Abbi
-ldungen/formulaInput.png>]
-<../Abbildungen/steps.png, id=372, 523.9575pt x 396.2805pt>
-File: ../Abbildungen/steps.png Graphic file (type png)
-<use ../Abbildungen/steps.png>
-Package pdftex.def Info: ../Abbildungen/steps.png  used on input line 66.
-(pdftex.def)             Requested size: 398.33858pt x 301.2791pt.
- [18 <../Abbildungen/handleChange.png> <../Abbildungen/axiosResolution.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [19 <../Abbildungen/steps.png>]) [20] (paper.bbl) [21
+ [23
+
+ <../Abbildungen/eingabe.png> <../Abbildungen/formulaInput.png>]
+<../Abbildungen/steps.png, id=496, 523.9575pt x 396.2805pt>
+File: ../Abbildungen/steps.png Graphic file (type png)
+<use ../Abbildungen/steps.png>
+Package pdftex.def Info: ../Abbildungen/steps.png  used on input line 65.
+(pdftex.def)             Requested size: 398.33858pt x 301.2791pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 62--68
+
+ []
 
 
-] [22
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [24 <../Abbildungen/handleChange.png> <../Abbildungen/axiosResolution.png>]
+Underfull \hbox (badness 1087) in paragraph at lines 69--70
+\OT1/cmr/m/n/12 Um das Er-geb-nis auch kom-pakt dar-zu-stel-len, un-ter-sucht R
+e-act mit-tels
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 69--70
+
+ []
+
+[25 <../Abbildungen/steps.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 72--73
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 74--75
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--77
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 78--84
+
+ []
+
+)
+Underfull \hbox (badness 10000) in paragraph at lines 85--139
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 85--139
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [26
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 220.
- [23]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 220.
+[27]
+Overfull \hbox (26.80728pt too wide) in paragraph at lines 175--179
+[][]\OT1/cmr/m/n/12 https://www.theseus.fi/bitstream/handle/10024/130495/FInal[
+]Year[]Thesis.pdf[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 181--185
+[][]\OT1/cmr/m/n/12 http://www.r-5.org/files/books/computers/languages/escss/w-
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 186--190
+[][]\OT1/cmr/m/n/12 https://medium.com/@gianluca.guarini/things-nobody-will-tel
+l-you-
+ []
+
+[28
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 216--220
+[][]\OT1/cmr/m/n/12 https://reactjs.org/docs/add-react-to-a-website.html[][] Au
+f-ge-ru-fen am
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 233--237
+[][]\OT1/cmr/m/n/12 https://trends.google.de/trends/explore?cat=31&date=today%2
+05-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 239--243
+[][]\OT1/cmr/m/n/12 https://chrome.google.com/webstore/detail/react-developer-
+ []
+
+[29]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 268.
+ [30
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 268.
  (paper.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 220.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 220.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 268.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 268.
 Package rerunfilecheck Info: File `paper.out' has not changed.
-(rerunfilecheck)             Checksum: C17E251B50FE75B10B0FACFBF9B752F5;1757.
-
-
-LaTeX Warning: There were undefined references.
+(rerunfilecheck)             Checksum: FF92BF13DB01E699BC54ABF5FD29EFE6;1931.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 220.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 268.
  ) 
 Here is how much of TeX's memory you used:
- 6673 strings out of 492973
- 102162 string characters out of 3143879
- 198837 words of memory out of 3000000
- 10373 multiletter control sequences out of 15000+200000
- 10424 words of font info for 38 fonts, out of 3000000 for 9000
+ 6722 strings out of 492973
+ 102724 string characters out of 3143879
+ 201185 words of memory out of 3000000
+ 10407 multiletter control sequences out of 15000+200000
+ 10725 words of font info for 39 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 36i,7n,40p,1244b,352s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 36i,7n,42p,1270b,425s stack positions out of 5000i,500n,10000p,200000b,50000s
 <D:/MikTex/fonts/type1/public/amsfonts/cm/cmbx10.pfb><D:/MikTex/fonts/type1/p
-ublic/amsfonts/cm/cmbx12.pfb><D:/MikTex/fonts/type1/public/amsfonts/cm/cmr10.pf
-b><D:/MikTex/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/MikTex/fonts/type1/pu
-blic/amsfonts/cm/cmr17.pfb><D:/MikTex/fonts/type1/public/amsfonts/cm/cmsl12.pfb
-><D:/MikTex/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on paper.pdf (35 pages, 543659 bytes).
+ublic/amsfonts/cm/cmbx12.pfb><D:/MikTex/fonts/type1/public/amsfonts/cm/cmcsc10.
+pfb><D:/MikTex/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/MikTex/fonts/type1/
+public/amsfonts/cm/cmr12.pfb><D:/MikTex/fonts/type1/public/amsfonts/cm/cmr17.pf
+b><D:/MikTex/fonts/type1/public/amsfonts/cm/cmsl12.pfb><D:/MikTex/fonts/type1/p
+ublic/amsfonts/cm/cmti12.pfb>
+Output written on paper.pdf (35 pages, 895833 bytes).
 PDF statistics:
- 448 PDF objects out of 1000 (max. 8388607)
- 84 named destinations out of 1000 (max. 500000)
- 305 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 603 PDF objects out of 1000 (max. 8388607)
+ 100 named destinations out of 1000 (max. 500000)
+ 349 words of extra memory for PDF output out of 10000 (max. 10000000)
 
