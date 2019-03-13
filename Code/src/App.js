@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-//Importing style file 
+//Importing style file
 import './App.css';
 
 class Lehrtools extends Component {
@@ -15,16 +15,14 @@ class Lehrtools extends Component {
       showMenu: true,
       data: null,
       result: null,
+      steps: null
     };
-    this.resultRef = React.createRef()
-    this.stepsRef = React.createRef()
+    this.resultRef = React.createRef();
     this.handleFormula = this.handleFormula.bind(this);
     this.handleHeuristik = this.handleHeuristik.bind(this);
     this.setResult = this.setResult.bind(this);
+    this.showSteps = this.showSteps.bind(this);
   }
-
-  //Scrolling to steps function
-  scrollToSteps = (event) => window.scrollTo(0, this.stepsRef.current.offsetTop)
 
   //Using input to formula field as new value for 'value'
   handleFormula(event) {
@@ -38,21 +36,23 @@ class Lehrtools extends Component {
 
   //Handling the received result, cases are invalid input, unsatisfiable formula and satisfiable formula
   //Parameter 'response' is the text that the Server API has sent
-  //Setting state result to new JSX-divs that will be displayed 
-  //In case of valid input, the results will be part of display --> using function dangerouslySetInnerHTML to use plain text as HTML
+  //Setting state result to new JSX-divs that will be displayed
+  //In case of valid input a button that offers to show the steps will be displayed
   setResult  = (response) => {
     var invalid = 'invalid'
     var unsatisfiable = 'unsatisfiable';
-    if (response.match(invalid)) { this.setState({result: <div className="results" ref={this.resultRef}><h2>Given formula is not valid</h2></div>})} //case invalid input --> sets result to answer
+    if (response.match(invalid)) { this.setState({result: <div className="results" ref={this.resultRef} ><h2>Given formula is not valid</h2></div>})} //case invalid input --> sets result to answer
     else if (response.match(unsatisfiable)) { //case unsatisfiable formula --> sets result to answer + result
-      this.setState({result: <div><div className="results" ref={this.resultRef}><h2>Result: Given formula is unsatisfiable.</h2><p><button className="button2" onClick={this.scrollToSteps}>Jump to steps</button></p></div>
-                                                                          <div className="receivedResults" ref={this.stepsRef} dangerouslySetInnerHTML={{ __html: this.state.data}}></div></div>
-                                                                        })
+      this.setState({result: <div className="results" ref={this.resultRef}><h2>Result: Given formula is unsatisfiable.</h2><p><button className="button2" onClick={this.showSteps}>Show steps</button></p></div>})
     } //case satisfiable formula --> sets result to answer + result
-    else this.setState({result: <div><div className="results" ref={this.resultRef}><h2>Result: Given formula is satisfiable.</h2><p><button className="button2" onClick={this.scrollToSteps}>Jump to steps</button></p></div>
-                                                                            <div className="receivedResults" ref={this.stepsRef} dangerouslySetInnerHTML={{ __html: this.state.data}}></div></div>
-})
+    else this.setState({result: <div className="results" ref={this.resultRef}><h2>Result: Given formula is satisfiable.</h2><p><button className="button2" onClick={this.showSteps}>Show steps</button></p></div>})
   }
+
+  //Button 'Show steps' is clicked --> displays steps
+  showSteps () {
+    this.setState({steps: <div className="receivedResults" dangerouslySetInnerHTML={{ __html: this.state.data}}></div>});
+  }
+
 
   //Used when button 'Resolution' is pressed
   handleRes() {
@@ -67,8 +67,8 @@ class Lehrtools extends Component {
       })
       .then(function (response) { //working with the received response
         this.setState({data : response.data}, //set state of 'data' to data in response
-                    this.setResult(response.data), //calling function setResult to display results
-                    window.scrollTo(0, this.resultRef.current.offsetTop)); //Scrolling to displayed results
+                    this.setResult(response.data),//calling function setResult to display results
+                    window.scrollTo(0,this.resultRef.current.offsetTop)); //scroll to where result is displayed
       }.bind(this))
       .catch(function (error) { //printing error if one happens
         console.log(error);
@@ -124,8 +124,9 @@ class Lehrtools extends Component {
             <button className="button2" onClick={this.handleBD.bind(this)}>BD Resolution</button>
             <button className="button2"onClick={this.handleDP.bind(this)}>DP</button>
           </div>
-      	  {/*Displaying value of 'result' --> answer and table with the steps if input was valid */}
+      	  {/*Displaying value of 'result' and 'steps' --> answer and table with the steps if input was valid */}
           <div>{this.state.result}</div>
+          <div>{this.state.steps}</div>
       </div>
     </header>
     );

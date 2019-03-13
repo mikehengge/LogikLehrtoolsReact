@@ -278,9 +278,8 @@ public class Resolution extends Subject {
 	private void execute_resolution(ArrayList<Variable> heuristik) {
 		if (_state != ModelState.RESOLUTION /* && _state != ModelState.RESOLUTION_OVER */)
 			return;
-
 		LinkedList<S_Calculation> res_steps = new LinkedList<>();
-		if (heuristik.isEmpty()) {
+		if (heuristik.isEmpty() || !heuristik.equals(_formula_vars))  {
 			for (Variable variable : _formula_vars) {
 				_resolventen_temp = _resolventen_temp
 						.union_with(ResolutionUtility.resolution_over(_formula, _resolventen, variable, res_steps));
@@ -288,6 +287,7 @@ public class Resolution extends Subject {
 					_resolventen_temp = _resolventen_temp.union_with(
 							ResolutionUtility.resolution_over(_resolventen, _resolventen, variable, res_steps));
 			}
+			System.out.println(_index+":Heuristik unusable - empty or incompatible with formula - will be using:" + _formula_vars.toString());
 
 			_steps.add(new Step_Resolution(ModelState.RESOLUTION, _index, res_steps, _resolventen_temp, _formula));
 			_formula_vars.clear();
