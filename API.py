@@ -1,6 +1,5 @@
 #!/usr/bin/env python
-# Reflects the requests from HTTP methods GET, POST, PUT, and DELETE
-# Written by Nathan Hamiel (2010)
+# Answers to Reacts GET-Request with the corresponding answers from the java app
 
 from BaseHTTPServer import HTTPServer, BaseHTTPRequestHandler
 from optparse import OptionParser
@@ -10,7 +9,7 @@ import urlparse
 
 class RequestHandler(BaseHTTPRequestHandler):
 	#custom response for Access Control Allow Origin (Might be unnecessary on other networks)
-    def send_response2(self, *args, **kwargs):
+    def send_response(self, *args, **kwargs):
         BaseHTTPRequestHandler.send_response(self, *args, **kwargs)
         self.send_header('Access-Control-Allow-Origin', '*')
 
@@ -29,7 +28,7 @@ class RequestHandler(BaseHTTPRequestHandler):
         else:
             command="java -jar Main.jar " + formula #start java app without heuristik
         p = Popen(command, stdout=PIPE, stderr=STDOUT, shell=True) #run java app with command
-        self.send_response2(200) 
+        self.send_response(200) 
         self.send_header("Content-type", "text/plain") #response is of type text\plain
         self.end_headers()
         try : 
