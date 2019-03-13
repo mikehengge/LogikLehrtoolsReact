@@ -109,7 +109,7 @@ class Lehrtools extends Component {
           <label>Please enter your formula</label>
           <div className="inputFormula">
       		{/*Input field for the formula, will be auto focused, displays the value of 'formula' and uses function handleFormula when something is written*/}
-            <input type="text" id="formulaInput" autoFocus={true} value={this.state.formula} onChange={this.handleFormula}  placeholder="Example: (var1 AND var2) OR var3">
+            <input type="text" id="formulaInput" autoFocus={true} value={this.state.formula} onChange={this.handleFormula}  placeholder="+ for OR, * for AND, - for NOT     EXAMPLE: (x1+x2)*-x3">
             </input>
           </div>
           <label>Please enter a heuristik (optional)</label>

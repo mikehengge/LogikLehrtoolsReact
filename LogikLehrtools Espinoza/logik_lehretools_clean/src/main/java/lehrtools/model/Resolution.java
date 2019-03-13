@@ -121,6 +121,7 @@ public class Resolution extends Subject {
 		_proof = noHeuristik._proof;
 	}
 
+	//CHANGED PART OF CODE - SECOND RESOLUTION THAT CAN HANDLE HEURISTIK
 	/**
 	 * Initializes all variables needed for the calculation. It takes a formula that
 	 * is going to be tested for satisfiability. The formula needs to be in a normal
@@ -252,6 +253,7 @@ public class Resolution extends Subject {
 		return _index;
 	}
 
+	//CHANGED CODE - DOES NOTHING NOW
 	/**
 	 * Main method of the resolution class that manages the execution of the
 	 * different steps of the resolution procedure. This method is used by the
@@ -266,6 +268,8 @@ public class Resolution extends Subject {
 		// execute_resolution(heuristik);
 	}
 
+	//CHANGED CODE - STARTS RESOLUTION
+	//PRINTS RESULT WHILE RUNNING NOW
 	/**
 	 * Calculates all resolvents to the actual formula and stores then in
 	 * _resolventen and _steps. If an empty clause is found amongst the resolvents
@@ -279,6 +283,7 @@ public class Resolution extends Subject {
 		if (_state != ModelState.RESOLUTION /* && _state != ModelState.RESOLUTION_OVER */)
 			return;
 		LinkedList<S_Calculation> res_steps = new LinkedList<>();
+		//Check if heuristik is empty or not valid for formula
 		if (heuristik.isEmpty() || !heuristik.equals(_formula_vars))  {
 			for (Variable variable : _formula_vars) {
 				_resolventen_temp = _resolventen_temp
@@ -359,6 +364,7 @@ public class Resolution extends Subject {
 			//generate_log();
 
 		}
+		//Do forward subsumption if resolution is not finished yet
 		if(!_resolventen.is_empty()) execute_forward_subsumption();
 
 	}
@@ -390,16 +396,6 @@ public class Resolution extends Subject {
 			update();
 			System.out.println(_index + ":End Resolution: formula has no resolvents");
 			return;
-//		} else if (_bw) {
-//			_formula = _subsumed_formula;
-//			_formula_vars = _formula.vars();
-//			_formula_vars.addAll(_subsumed_resolvents.vars());
-//			_state = ModelState.RESOLUTION;
-//			_index++;
-//			_steps.add(new Step_Start(ModelState.START, _index, _formula.union_with(_resolventen)));
-//			_fw = false;
-//			_bw = false;
-//			update();
 		}
 		generate_log();
 		if (!_resolventen.is_empty()) execute_backward_subsumption();
@@ -435,7 +431,7 @@ public class Resolution extends Subject {
 			update();
 		}
 		generate_log();
-
+		//Redo resolution if not fully resolved yet
 		if (!_resolventen.is_empty()) execute_resolution(_heuristik);
 		else {
 			System.out.println(_index + ":End Resolution: formula has no resolvents");
