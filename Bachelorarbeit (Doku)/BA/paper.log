@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6730 64-bit) (preloaded format=pdflatex 2018.10.23)  13 MAR 2019 14:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6730 64-bit) (preloaded format=pdflatex 2018.10.23)  13 MAR 2019 20:15
 entering extended mode
-**"D:/GitHub/LogikLehrtoolsReact/Bachelorarbeit (Doku)/alt/paper.tex"
-("D:/GitHub/LogikLehrtoolsReact/Bachelorarbeit (Doku)/alt/paper.tex"
+**"D:/GitHub/LogikLehrtoolsReact/Bachelorarbeit (Doku)/BA/paper.tex"
+("D:/GitHub/LogikLehrtoolsReact/Bachelorarbeit (Doku)/BA/paper.tex"
 LaTeX2e <2018-04-01> patch level 5
 (D:\MikTex\tex\latex\base\report.cls
 Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
@@ -749,77 +749,81 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 ]
 [27]
-Overfull \hbox (26.80728pt too wide) in paragraph at lines 175--179
+Overfull \hbox (26.80728pt too wide) in paragraph at lines 176--180
 [][]\OT1/cmr/m/n/12 https://www.theseus.fi/bitstream/handle/10024/130495/FInal[
 ]Year[]Thesis.pdf[][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 181--185
+Underfull \hbox (badness 10000) in paragraph at lines 182--186
 [][]\OT1/cmr/m/n/12 http://www.r-5.org/files/books/computers/languages/escss/w-
 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 186--190
-[][]\OT1/cmr/m/n/12 https://medium.com/@gianluca.guarini/things-nobody-will-tel
-l-you-
  []
 
 [28
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 216--220
+Underfull \hbox (badness 10000) in paragraph at lines 188--192
+[][]\OT1/cmr/m/n/12 https://medium.com/@gianluca.guarini/things-nobody-will-tel
+l-you-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 218--222
 [][]\OT1/cmr/m/n/12 https://reactjs.org/docs/add-react-to-a-website.html[][] Au
 f-ge-ru-fen am
  []
 
+[29
 
-Underfull \hbox (badness 10000) in paragraph at lines 233--237
+]
+Underfull \hbox (badness 10000) in paragraph at lines 236--240
 [][]\OT1/cmr/m/n/12 https://trends.google.de/trends/explore?cat=31&date=today%2
 05-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 239--243
+Underfull \hbox (badness 10000) in paragraph at lines 242--246
 [][]\OT1/cmr/m/n/12 https://chrome.google.com/webstore/detail/react-developer-
  []
 
-[29]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 268.
- [30
+[30
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 268.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 271.
+ [31
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 271.
  (paper.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 268.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 268.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 271.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 271.
 Package rerunfilecheck Info: File `paper.out' has not changed.
 (rerunfilecheck)             Checksum: FF92BF13DB01E699BC54ABF5FD29EFE6;1931.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 268.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 271.
  ) 
 Here is how much of TeX's memory you used:
- 6722 strings out of 492973
- 102724 string characters out of 3143879
+ 6725 strings out of 492973
+ 102738 string characters out of 3143879
  201185 words of memory out of 3000000
  10407 multiletter control sequences out of 15000+200000
  10725 words of font info for 39 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 36i,7n,42p,1270b,425s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 36i,7n,42p,1269b,429s stack positions out of 5000i,500n,10000p,200000b,50000s
 <D:/MikTex/fonts/type1/public/amsfonts/cm/cmbx10.pfb><D:/MikTex/fonts/type1/p
 ublic/amsfonts/cm/cmbx12.pfb><D:/MikTex/fonts/type1/public/amsfonts/cm/cmcsc10.
 pfb><D:/MikTex/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/MikTex/fonts/type1/
 public/amsfonts/cm/cmr12.pfb><D:/MikTex/fonts/type1/public/amsfonts/cm/cmr17.pf
 b><D:/MikTex/fonts/type1/public/amsfonts/cm/cmsl12.pfb><D:/MikTex/fonts/type1/p
 ublic/amsfonts/cm/cmti12.pfb>
-Output written on paper.pdf (35 pages, 895833 bytes).
+Output written on paper.pdf (36 pages, 896920 bytes).
 PDF statistics:
- 603 PDF objects out of 1000 (max. 8388607)
- 100 named destinations out of 1000 (max. 500000)
+ 610 PDF objects out of 1000 (max. 8388607)
+ 103 named destinations out of 1000 (max. 500000)
  349 words of extra memory for PDF output out of 10000 (max. 10000000)
 
